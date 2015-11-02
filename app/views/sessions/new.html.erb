@@ -1,0 +1,17 @@
+<%= provide(:title, "Log in")%>
+This is the new.html.erb page
+<%= form_tag(login_path) do  %>
+
+  <%= label_tag :email %>
+  <%= email_field_tag :email %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= link_to 'LOGOUT', logout_path, method: :delete %>
+
+  <%= submit_tag "Log in" %>
+   <p>New Teacher? <%= link_to "Sign up now!", new_teacher_path %></p>
+    <p>New Student? <%= link_to "Sign up now!", new_student_path %></p>
+<% end %>
+
+<!-- <p>New teacher? <%= link_to "Sign up now!", new_teacher_path %></p> -->
