@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'LOGOUT', logout_path, method: :delete %>
 
 <h1>Listing Students</h1>
 
@@ -19,7 +20,7 @@
       <tr>
         <td><%= student.name %></td>
         <td><%= student.email %></td>
-        <td><%= student.password_digest %></td>
+        <td><%= student.password %></td>
         <td><%= student.teacher_id %></td>
         <td><%= student.score %></td>
         <td><%= link_to 'Show', student %></td>
