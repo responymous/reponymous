@@ -7,11 +7,14 @@ This is the new.html.erb page
 
   <%= label_tag :password %>
   <%= password_field_tag :password %>
-  <%= link_to 'LOGOUT', logout_path, method: :delete %>
 
   <%= submit_tag "Log in" %>
-   <p>New Teacher? <%= link_to "Sign up now!", new_teacher_path %></p>
-    <p>New Student? <%= link_to "Sign up now!", new_student_path %></p>
+  <select>
+   <option>New Teacher? <%= link_to "Sign up now!", new_teacher_path %></option>
+    <option>New Student? <%= link_to "Sign up now!", new_student_path %></option>
+  </select>
+    <%= link_to 'LOGOUT', logout_path, method: :delete %>
+
 <% end %>
 
 <!-- <p>New teacher? <%= link_to "Sign up now!", new_teacher_path %></p> -->
