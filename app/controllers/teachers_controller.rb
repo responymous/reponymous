@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+  before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def index
     @teachers = Teacher.all
@@ -25,6 +26,9 @@ class TeachersController < ApplicationController
     else
       render :edit
     end
+  end
+  
+  def show
   end
 
   # DELETE /students/1
