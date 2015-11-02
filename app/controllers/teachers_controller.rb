@@ -1,36 +1,19 @@
 class TeachersController < ApplicationController
-  before_action :set_teacher, only: [:show, :edit, :update, :destroy]
-
-  # GET /teachers
-  def index
-    @teachers = Teacher.all
-  end
-
-  # GET /teachers/1
-  def show
-  end
-
-  # GET /teachers/new
   def new
-    @teacher = Teacher.new
+      @teacher = Teacher.new
   end
 
-  # GET /teachers/1/edit
-  def edit
-  end
-
-  # POST /teachers
+  # POST /teacher
   def create
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to @teacher, notice: 'Teacher was successfully created.'
+      redirect_to @teacher, notice: 'teacher was successfully created.'
     else
       render :new
     end
   end
 
-  # PATCH/PUT /teachers/1
   def update
     if @teacher.update(teacher_params)
       redirect_to @teacher, notice: 'Teacher was successfully updated.'
@@ -39,11 +22,12 @@ class TeachersController < ApplicationController
     end
   end
 
-  # DELETE /teachers/1
+  # DELETE /students/1
   def destroy
     @teacher.destroy
     redirect_to teachers_url, notice: 'Teacher was successfully destroyed.'
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -53,6 +37,6 @@ class TeachersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def teacher_params
-      params.require(:teacher).permit(:name, :email, :password_digest)
+      params.require(:teacher).permit(:name, :email, :password)
     end
 end
