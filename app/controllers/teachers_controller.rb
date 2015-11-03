@@ -1,9 +1,6 @@
 class TeachersController < ApplicationController
+  before_action :logged_in?
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @teachers = Teacher.all
-  end
 
   def new
     @teacher = Teacher.new
@@ -31,6 +28,12 @@ class TeachersController < ApplicationController
   def show
     # @score_average = Student.score_avg
   end
+
+  def edit
+    @teacher = Teacher.find(params[:id])
+
+  end
+
 
   # DELETE /students/1
   def destroy
