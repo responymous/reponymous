@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
 
 
-  get 'teachers/new'
+  get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
 
-  get 'teachers/create'
+  get 'student_dashboard' => 'dashboard#student_dashboard'
 
-  post 'teachers/update'
-
-  get 'teachers/destroy'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

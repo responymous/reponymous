@@ -13,13 +13,13 @@ class SessionsController < ApplicationController
      session[:name] = t.name
      session[:user_type] = t.class.to_s
      session[:user_id] = t.id
-     redirect_to teachers_path, notice: "You have been successfully logged in."
+     redirect_to teacher_dashboard_path, notice: "You have been successfully logged in."
    elsif s && s.authenticate(params[:password])
      session[:login] = true
      session[:name] = s.name
      session[:user_type] = s.class.to_s
      session[:user_id] = s.id
-     redirect_to students_path, notice: "You have been successfully logged in."
+     redirect_to student_dashboard_path, notice: "You have been successfully logged in."
    else
      # If user is not found, redirect to login page.
      # redirect_to login_path, notice: "Email/password incorrect.  Please try again or create a new account."
