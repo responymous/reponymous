@@ -24,8 +24,6 @@ class TeachersController < ApplicationController
     end
   end
 
-  def show
-  end
 
   # DELETE /students/1
   def destroy
