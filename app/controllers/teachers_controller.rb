@@ -1,10 +1,6 @@
 class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @teachers = Teacher.all
-  end
-
   def new
       @teacher = Teacher.new
   end
@@ -27,7 +23,7 @@ class TeachersController < ApplicationController
       render :edit
     end
   end
-  
+
   def show
   end
 
