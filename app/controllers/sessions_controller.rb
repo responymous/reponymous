@@ -7,18 +7,13 @@ class SessionsController < ApplicationController
    # Search for user in databases. One of these will fill with information, the other two will be nil.
    t = Teacher.find_by_email(params[:email])
    s = Student.find_by_email(params[:email])
+
    # Check the above variables to see which user type we are dealing with and then populate session variables.
    if t && t.authenticate(params[:password])
-     session[:login] = true
-     session[:name] = t.name
-     session[:user_type] = t.class.to_s
-     session[:user_id] = t.id
+     log_in t
      redirect_to teacher_dashboard_path, notice: "You have been successfully logged in."
    elsif s && s.authenticate(params[:password])
-     session[:login] = true
-     session[:name] = s.name
-     session[:user_type] = s.class.to_s
-     session[:user_id] = s.id
+     log_in s
      redirect_to student_dashboard_path, notice: "You have been successfully logged in."
    else
      # If user is not found, redirect to login page.

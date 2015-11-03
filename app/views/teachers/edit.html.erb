@@ -1,6 +1,23 @@
-<h1>Editing Teacher</h1>
+<% provide(:title, "Edit Teacher") %>
+<h1>Update your profile</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@teacher) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-<%= link_to 'show', teachers_path %>
-<%= link_to 'back', teachers_path %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

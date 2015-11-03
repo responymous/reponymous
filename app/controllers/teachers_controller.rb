@@ -1,8 +1,9 @@
 class TeachersController < ApplicationController
+  before_action :logged_in?
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def new
-      @teacher = Teacher.new
+    @teacher = Teacher.new
   end
 
   # POST /teacher
@@ -22,6 +23,10 @@ class TeachersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def edit
+    @teacher = Teacher.find(params[:id])
   end
 
 
