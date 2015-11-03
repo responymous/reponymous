@@ -6,7 +6,7 @@ class TeachersController < ApplicationController
   end
 
   def new
-      @teacher = Teacher.new
+    @teacher = Teacher.new
   end
 
   # POST /teacher
@@ -27,8 +27,9 @@ class TeachersController < ApplicationController
       render :edit
     end
   end
-  
+
   def show
+    # @score_average = Student.score_avg
   end
 
   # DELETE /students/1
