@@ -10,7 +10,8 @@ class Student < ActiveRecord::Base
     self.all.each do |student|
       student_scores << student.score
     end
-    student_scores.sum.to_f / student_scores.length
+    average = student_scores.sum.to_f / student_scores.length
+    average.round(1)
   end
 
 

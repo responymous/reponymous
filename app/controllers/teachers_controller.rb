@@ -19,7 +19,7 @@ class TeachersController < ApplicationController
 
   def update
     if @teacher.update(teacher_params)
-      redirect_to @teacher, notice: 'Teacher was successfully updated.'
+      redirect_to teacher_dashboard_path, notice: 'Teacher was successfully updated.'
     else
       render :edit
     end
