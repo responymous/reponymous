@@ -30,13 +30,17 @@ class StudentsController < ApplicationController
     else
       render :new
     end
-    
+
   end
 
   # PATCH/PUT /students/1
   def update
     if @student.update(student_params)
-      redirect_to @student, notice: 'Student was successfully updated.'
+      if @current_user.is_a?(Teacher)
+        redirect_to students_path, notice: 'Student was successfully updated.'
+      else
+        redirect_to student_dashboard_path
+      end
     else
       render :edit
     end

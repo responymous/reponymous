@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   belongs_to :teacher
-  has_many :scores
+  has_many :scores 
   has_secure_password
 
   # Average score based on scores input by students.
