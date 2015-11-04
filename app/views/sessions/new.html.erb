@@ -1,5 +1,5 @@
 <%= provide(:title, "Log in")%>
-This is the new.html.erb page
+Please Log In.
 <%= form_tag(login_path) do  %>
 
   <%= label_tag :email %>
@@ -10,11 +10,9 @@ This is the new.html.erb page
 
   <%= submit_tag "Log in" %>
   <select>
-   <option>New Teacher? <%= link_to "Sign up now!", new_teacher_path %></option>
-    <option>New Student? <%= link_to "Sign up now!", new_student_path %></option>
+   <option> New Teacher? <%= link_to "Sign up now!", new_teacher_path %></option>
+    <option> New Student? <%= link_to "Sign up now!", new_student_path %></option>
   </select>
     <%= link_to 'LOGOUT', logout_path, method: :delete %>
 
 <% end %>
-
-<!-- <p>New teacher? <%= link_to "Sign up now!", new_teacher_path %></p> -->

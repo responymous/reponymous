@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+    @score = Student.find_by(params[:id])
   end
 
   # POST /students
@@ -29,6 +30,7 @@ class StudentsController < ApplicationController
     else
       render :new
     end
+    
   end
 
   # PATCH/PUT /students/1

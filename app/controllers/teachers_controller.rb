@@ -31,7 +31,6 @@ class TeachersController < ApplicationController
 
   def edit
     @teacher = Teacher.find(params[:id])
-
   end
 
 

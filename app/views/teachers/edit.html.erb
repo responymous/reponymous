@@ -13,6 +13,7 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
+      <%= @teacher.total_grades %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
