@@ -15,7 +15,7 @@ Student.create!(name: "danai", email: "da@example.com", password: "password",  s
   Student.create!(name: Faker::Name.name,
       email: Faker::Internet.free_email,
       password: Faker::Internet.password,
-      score: Faker::Number.between(1, 5),
+      score: Faker::Number.between(1, 6),
       teacher_id: 1)
 end
 
