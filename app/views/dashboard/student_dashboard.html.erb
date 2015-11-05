@@ -1,15 +1,22 @@
-<h1>Student_dashboard</h1>
+<h1>Student Dashboard</h1>
+<h3>Raise your hand anonymously!</h3>
 
-  <div class="col-md-3">
-    <%= button_to '1', student_path(@current_user, student: {score: 1}), method: :patch %>
-    <%= button_to '2', student_path(@current_user, student: {score: 2}), method: :patch %>
-    <%= button_to '3', student_path(@current_user, student: {score: 3}), method: :patch %>
-    <%= button_to '4', student_path(@current_user, student: {score: 4}), method: :patch %>
-    <%= button_to '5', student_path(@current_user, student: {score: 5}), method: :patch %>
-    <%= button_to '6', student_path(@current_user, student: {score: 6}), method: :patch %>
-  </div>
+<tbody>
+  <tr>
+    <td><%= button_to '1', student_path(@current_user, student: {score: 1}), method: :patch %></td>
+    <td><%= button_to '2', student_path(@current_user, student: {score: 2}), method: :patch %></td>
+    <td><%= button_to '3', student_path(@current_user, student: {score: 3}), method: :patch %></td>
+    <td><%= button_to '4', student_path(@current_user, student: {score: 4}), method: :patch %></td>
+    <td><%= button_to '5', student_path(@current_user, student: {score: 5}), method: :patch %></td>
+    <td><%= button_to '6', student_path(@current_user, student: {score: 6}), method: :patch %></td>
+  </tr>
+</tbody>
 
-<%= link_to 'LOGOUT', logout_path, method: :delete %>
+
+<p><%= link_to 'LOGOUT', logout_path, method: :delete %></p>
+
+
+
 <!-- * Add six buttons to the student_dashboard.
 * All the buttons submit to the same action, with one param but with different values. params[:student][:score] == 4
 * The one action can be students#update
