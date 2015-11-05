@@ -20,14 +20,20 @@ class TeachersController < ApplicationController
 
   def update
     if @teacher.update(teacher_params)
-      redirect_to teacher_dashboard_path, notice: 'Teacher was successfully updated.'
+      if @current_user.is_a?(Student)
+        redirect_to teachers_path, notice: 'Teacher was successfully updated.'
+      else
+        redirect_to teacher_dashboard_path
+      end
     else
       render :edit
     end
+    @reset = Student.reset_score
   end
 
+
   def show
-     @score_average = Student.score_avg
+    @score_average = Student.score_avg
   end
 
   def edit

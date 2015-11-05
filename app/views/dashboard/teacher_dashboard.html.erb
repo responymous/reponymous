@@ -1,6 +1,6 @@
 <h1>Teacher_dashboard</h1>
 
-<%= button_to 'Reset', student_path(@current_user, student: {score: 1}), method: :patch %>
+<%= button_to 'Reset', teachers_path(@reset) %>
 <%= link_to 'LOGOUT', logout_path, method: :delete %>
 <%= link_to 'Edit Students', students_path %>
 <%= link_to 'My Profile', edit_teacher_path(@current_user) %>
