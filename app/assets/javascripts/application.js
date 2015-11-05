@@ -12,10 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 
-$('input').click(function() {
-  $(this).css(backgroundColor: "blue");
-})
+function highlight() {
+  $(':input').click(function() {
+    $('input').css("background", "white");
+    $(this).css("background", "blue");
+  });
+};
+
+$(highlight)
