@@ -8,7 +8,7 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Password digest</th>
+      <!-- <th>Password digest</th> -->
       <th>Teacher</th>
       <th>Score</th>
       <th colspan="3"></th>
@@ -20,10 +20,10 @@
       <tr>
         <td><%= student.name %></td>
         <td><%= student.email %></td>
-        <td><%= student.password %></td>
+        <!-- <td><%= student.password %></td> -->
         <td><%= student.teacher_id %></td>
         <td><%= student.score %></td>
-        <td><%= link_to 'Show', student %></td>
+        <!-- <td><%= link_to 'Show', student %></td> -->
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
