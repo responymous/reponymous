@@ -57,16 +57,13 @@
 
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
-          
+
+          <p id="notice"><%= notice %></p>
+
           <p class="teacher-score"><%= @score_average %></p>
 
         </p>
-        <!-- <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-        </p> -->
-
-        <!-- <%= link_to 'LOGOUT', logout_path, method: :delete %> -->
-
+        
     </div>
 </div>
 
@@ -75,8 +72,8 @@
 </html>
 
 
-<h1>Teacher_dashboard</h1>
+<!-- <h1>Teacher_dashboard</h1>
 <%= link_to 'LOGOUT', logout_path, method: :delete %>
 <%= link_to 'Edit Students', students_path %>
 <%= link_to 'My Profile', edit_teacher_path(@current_user) %>
-<p><%= @score_average %></p>
+<p><%= @score_average %></p> -->

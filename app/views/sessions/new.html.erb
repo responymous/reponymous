@@ -51,7 +51,6 @@
             Asking for help just got easier!
         </p>
         <p class="splash-subhead">
-          <!-- <%= provide(:title, "Log in")%> -->
 
           <%= form_tag(login_path) do  %>
             <p><%= email_field_tag :email %></p>
@@ -64,19 +63,9 @@
               <%= submit_tag "Get Started", class: "pure-button pure-button-primary" %>
             </p>
 
-            <!-- <select>
-             <option>New Teacher? <%= link_to "Sign up now!", new_teacher_path %></option>
-              <option>New Student? <%= link_to "Sign up now!", new_student_path %></option>
-            </select> -->
-
           <% end %>
         </p>
-        <!-- <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-        </p> -->
-
-        <!-- <%= link_to 'LOGOUT', logout_path, method: :delete %> -->
-
+        
     </div>
 </div>
 

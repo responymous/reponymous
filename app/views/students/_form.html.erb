@@ -12,25 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, class: "new-student-label" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email, class: "new-student-label" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password, class: "new-student-label" %><br>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :teacher_id %><br>
+    <%= f.label :teacher_id, class: "new-student-label" %><br>
     <%= f.number_field :teacher_id %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :score %><br>
     <%= f.number_field :score %>
-  </div>
+  </div> -->
   <div class="actions">
     <%= f.submit %>
   </div>
