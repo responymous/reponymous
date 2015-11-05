@@ -58,7 +58,7 @@
 
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
-          <%= button_to 'Reset Score', teacher_dashboard_path(@reset), class: "pure-button pure-button-primary" %>
+          <%= button_to 'Reset Score', teacher_dashboard_path, class: "pure-button pure-button-primary" %>
 
           <p class="teacher-score"><%= @score_average %></p>
 
