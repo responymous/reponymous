@@ -57,11 +57,11 @@
 
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
+          <%= button_to 'Reset', teachers_path(@reset) %>
 
           <p id="notice"><%= notice %></p>
 
           <p class="teacher-score"><%= @score_average %></p>
-          <%= button_to 'Reset', teachers_path(@reset) %>
 
 
         </p>
