@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$('input').click(function() {
+  $(this).css(backgroundColor: "blue");
+})
