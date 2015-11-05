@@ -17,10 +17,10 @@ class Student < ActiveRecord::Base
   end
 
 
-  def self.reset_score
-    self.all.each do |student|
-      student.score = nil
-      student.save
-    end
-  end
+  # def self.reset_score
+  #   self.all.each do |student|
+  #     student.score = nil
+  #     student.save
+  #   end
+  # end
 end

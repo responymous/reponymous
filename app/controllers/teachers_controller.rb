@@ -33,7 +33,7 @@ class TeachersController < ApplicationController
 
   def show
     @score_average = Student.score_avg
-    @reset = Student.reset_score
+    # @reset = Student.reset_score
   end
 
   def edit
