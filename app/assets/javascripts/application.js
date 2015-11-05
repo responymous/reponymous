@@ -16,9 +16,9 @@
 
 
 function highlight() {
-  $(':input').click(function() {
-    $('input').css("background", "white");
-    $(this).css("background", "blue");
+  $(':input.score').click(function() {
+    $('input.score').removeClass("blue");
+    $(this).addClass("blue");
   });
 };
 
