@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'student_dashboard' => 'dashboard#student_dashboard'
 
-
+  get 'teacher_dashboard' => 'dashboard#reset_score'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

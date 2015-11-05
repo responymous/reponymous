@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   belongs_to :teacher
-  has_many :scores 
+  has_many :scores
   has_secure_password
 
   # Average score based on scores input by students.
@@ -8,10 +8,18 @@ class Student < ActiveRecord::Base
     student_scores = Array.new
 
     self.all.each do |student|
-      student_scores << student.score
+      if student.score != nil
+        student_scores << student.score
+      end
     end
     student_scores.sum.to_f / student_scores.length
   end
 
 
+  def self.reset_score
+    self.all.each do |student|
+      student.score = nil
+      student.save
+    end
+  end
 end

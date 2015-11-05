@@ -17,6 +17,7 @@ class TeachersController < ApplicationController
     end
   end
 
+
   def update
     if @teacher.update(teacher_params)
       redirect_to teacher_dashboard_path, notice: 'Teacher was successfully updated.'
@@ -26,7 +27,7 @@ class TeachersController < ApplicationController
   end
 
   def show
-    # @score_average = Student.score_avg
+     @score_average = Student.score_avg
   end
 
   def edit
@@ -39,6 +40,7 @@ class TeachersController < ApplicationController
     @teacher.destroy
     redirect_to teachers_url, notice: 'Teacher was successfully destroyed.'
   end
+
 
 
   private

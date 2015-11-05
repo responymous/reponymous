@@ -1,15 +1,15 @@
 <h1>Student_dashboard</h1>
 
   <div class="col-md-3">
-    <%= button_to '1', student_path(@current_user, student: {score: 1}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
-    <%= button_to '2', student_path(@current_user, student: {score: 2}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
-    <%= button_to '3', student_path(@current_user, student: {score: 3}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
-    <%= button_to '4', student_path(@current_user, student: {score: 4}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
-    <%= button_to '5', student_path(@current_user, student: {score: 5}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
-    <%= button_to '6', student_path(@current_user, student: {score: 6}), class: {:style=>'color:#FFFFFF;', :class => "css_class"}, method: :patch %>
+    <%= button_to '1', student_path(@current_user, student: {score: 1}), method: :patch %>
+    <%= button_to '2', student_path(@current_user, student: {score: 2}), method: :patch %>
+    <%= button_to '3', student_path(@current_user, student: {score: 3}), method: :patch %>
+    <%= button_to '4', student_path(@current_user, student: {score: 4}), method: :patch %>
+    <%= button_to '5', student_path(@current_user, student: {score: 5}), method: :patch %>
+    <%= button_to '6', student_path(@current_user, student: {score: 6}), method: :patch %>
   </div>
 
-<%= button_to 'LOGOUT', logout_path, method: :delete %>
+<%= link_to 'LOGOUT', logout_path, method: :delete %>
 <!-- * Add six buttons to the student_dashboard.
 * All the buttons submit to the same action, with one param but with different values. params[:student][:score] == 4
 * The one action can be students#update

@@ -33,6 +33,14 @@ class StudentsController < ApplicationController
 
   end
 
+  def reset_score
+    if @current_user.is_a?(Teacher)
+        @students = Students.each do |student|
+        student.score = 0
+        @teacher = Teacher.where(id: 1).first #todo
+      end
+    end
+  end
   # PATCH/PUT /students/1
   def update
     if @student.update(student_params)

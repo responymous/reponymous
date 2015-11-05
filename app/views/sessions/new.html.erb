@@ -9,10 +9,7 @@ Please Log In.
   <%= password_field_tag :password %>
 
   <%= submit_tag "Log in" %>
-  <select>
-   <option> New Teacher? <%= link_to "Sign up now!", new_teacher_path %></option>
-    <option> New Student? <%= link_to "Sign up now!", new_student_path %></option>
-  </select>
+
     <%= link_to 'LOGOUT', logout_path, method: :delete %>
 
 <% end %>
