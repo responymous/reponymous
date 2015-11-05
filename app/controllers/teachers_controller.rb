@@ -28,12 +28,12 @@ class TeachersController < ApplicationController
     else
       render :edit
     end
-    @reset = Student.reset_score
   end
 
 
   def show
     @score_average = Student.score_avg
+    @reset = Student.reset_score
   end
 
   def edit

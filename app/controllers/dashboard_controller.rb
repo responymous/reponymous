@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
 
   def teacher_dashboard
     @score_average = Student.score_avg
+    @reset = Student.reset_score
   end
 
 
