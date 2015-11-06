@@ -15,12 +15,4 @@ class Student < ActiveRecord::Base
     average = student_scores.sum.to_f / student_scores.length
     average.round(1)
   end
-
-
-  # def self.reset_score
-  #   self.all.each do |student|
-  #     student.score = nil
-  #     student.save
-  #   end
-  # end
 end

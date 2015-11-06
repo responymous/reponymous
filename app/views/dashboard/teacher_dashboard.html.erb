@@ -51,13 +51,13 @@
         <h1 class="teacher-splash-head">TEACHER DASHBOARD</h1>
 
         <p class="splash-subhead">
-          <!-- <%= provide(:title, "Log in")%> -->
-          <!-- <h1>Teacher_dashboard</h1> -->
-          <!-- <%= link_to 'Edit Students', students_path %> -->
-          <!-- <%= link_to 'My Profile', edit_teacher_path(@current_user) %> -->
 
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
+          <%= link_to 'Create Topics', topics_path(@current_user), class: "pure-button pure-button-primary" %>
+          <%= link_to 'Edit Topics', edit_topic_path(@current_user), class: "pure-button pure-button-primary" %>
+          <%= link_to 'Delete Topics', topic_path(@current_user), class: "pure-button pure-button-primary" %>
+
           <!-- <%= button_to 'Reset Score', teacher_dashboard_path, class: "pure-button pure-button-primary" %> -->
 
           <p class="teacher-score"><%= @score_average %></p>
