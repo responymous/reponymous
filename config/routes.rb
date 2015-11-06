@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :topics
   get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
   # post 'teacher_dashboard' => 'dashboard#teacher_dashboard'
 
