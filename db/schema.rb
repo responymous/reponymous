@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106175003) do
+ActiveRecord::Schema.define(version: 20151106205709) do
 
   create_table "scores", force: :cascade do |t|
     t.integer  "score"
