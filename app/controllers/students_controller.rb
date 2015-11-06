@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @students = Student.where(teacher_id: @current_user)
+    @students =  Student.where(teacher_id: @current_user)
   end
 
   # GET /students/1
@@ -57,7 +57,6 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
-
 
     # Only allow a trusted parameter "white list" through.
     def student_params

@@ -4,7 +4,6 @@ class TeachersController < ApplicationController
 
   def new
     @teacher = Teacher.new
-     @teacher = Teacher.find(session[:user_id])
   end
 
   # POST /teacher
