@@ -1,9 +1,10 @@
 class TeachersController < ApplicationController
-  before_action :logged_in?
+  before_action :logged_in?, except: [:new, :create]
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def new
     @teacher = Teacher.new
+     @teacher = Teacher.find(session[:user_id])
   end
 
   # POST /teacher
@@ -11,7 +12,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to @teacher, notice: 'teacher was successfully created.'
+      redirect_to teacher_dashboard_path, notice: 'teacher was successfully created.'
     else
       render :new
     end
@@ -58,5 +59,19 @@ class TeachersController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def teacher_params
       params.require(:teacher).permit(:name, :email, :password)
+    end
+
+    def allow_access?
+    # authorizes teachers to access desired pages
+      unless session[:user_type]=="teacher" && session[:user_id] == @teacher.id
+        redirect_to login_path, notice: "You don't have access to this"
+      end
+    end
+
+    def teacher?
+    # authorizes teachers to access desired pages
+      unless session[:user_type]=="teacher"
+        redirect_to login_path, notice: "You don't have access to this"
+      end
     end
 end
