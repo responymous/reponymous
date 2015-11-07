@@ -27,4 +27,6 @@ Topic.create!(title: "Metaphysics", teacher_id: 1)
 Topic.create!(title: "Mailers", teacher_id: 2)
 
 Score.create!(score: 6, student_id: 1, topic_id: 1)
-Score.create!(score: 2, student_id: 2, topic_id: 1)
+Score.create!(score: 6, student_id: 2, topic_id: 1)
+Score.create!(score: 6, student_id: 4, topic_id: 1)
+Score.create!(score: 2, student_id: 2, topic_id: 2)
