@@ -207,11 +207,27 @@ input.pure-button-primary {
     font-size: 150px;
     font-weight: bold;
     color: white;
+    display: inline-block;
     /*border: 3px solid white;
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;*/
+}
+
+.avg-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+.numscore-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    margin-left: 100px;
 }
 
 /*

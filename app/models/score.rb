@@ -21,7 +21,7 @@ class Score < ActiveRecord::Base
     topic_score.each do |n|
       scores << n.score
     end
-    [scores.length, scores.sum / scores.length]
+    [scores.length, scores.sum.to_f / scores.length]
     # {"Count" => scores.length ,"Average" => scores.sum / scores.length}
   end
 

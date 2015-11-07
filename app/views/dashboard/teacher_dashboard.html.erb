@@ -60,8 +60,10 @@
 
           <!-- <%= button_to 'Reset Score', teacher_dashboard_path, class: "pure-button pure-button-primary" %> -->
 
+          <p class="avg-heading">Average</p>
           <p class="teacher-score"><%= Score.average[1] %></p>
-
+          <p class="numscore-heading">Number of Scores</p>
+          <p class="teacher-score"><%= Score.average[0] %></p>
 
         </p>
 
