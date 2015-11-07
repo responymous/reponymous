@@ -4,6 +4,7 @@ class Score < ActiveRecord::Base
 
   # Average score based on scores input by students.
 
+
   # 1. narrow by the topic  -- topic id
   # 2. narrow by the teacher  -- teacher id
   # 3. avg all student scores beloning the the corresponding topic/teacher
@@ -23,6 +24,7 @@ class Score < ActiveRecord::Base
     [scores.length, scores.sum / scores.length]
     # {"Count" => scores.length ,"Average" => scores.sum / scores.length}
   end
+
   # def score_avg
   #   student_scores = Array.new
   #

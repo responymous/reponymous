@@ -6,7 +6,6 @@ class DashboardController < ApplicationController
     # @average = Score.where(student_id: @current_user).score_avg
   end
 
-
   def student_dashboard
   end
 
