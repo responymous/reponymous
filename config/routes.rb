@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :topics
-  get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
+  get 'teacher_dashboard/:id', to: 'dashboard#teacher_dashboard', as: 'teacher_dashboard'
   # post 'teacher_dashboard' => 'dashboard#teacher_dashboard'
 
   get 'student_dashboard' => 'dashboard#student_dashboard'
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   root 'sessions#new'
+  resources :topics
   resources :students
   resources :teachers
   # The priority is based upon order of creation: first created -> highest priority.
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    # get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

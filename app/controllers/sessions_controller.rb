@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
    # Check the above variables to see which user type we are dealing with and then populate session variables.
    if t && t.authenticate(params[:password])
      log_in t
-     redirect_to teacher_dashboard_path, notice: "You have been successfully logged in."
+     redirect_to teacher_dashboard_path(:id), notice: "You have been successfully logged in."
    elsif s && s.authenticate(params[:password])
      log_in s
      redirect_to student_dashboard_path, notice: "You have been successfully logged in."

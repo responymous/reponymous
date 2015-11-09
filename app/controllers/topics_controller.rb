@@ -8,6 +8,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/1
   def show
+    @topic = Topic.find(params[:id])
   end
 
   # GET /topics/new

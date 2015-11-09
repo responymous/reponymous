@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Password digest:</strong>
+  <strong>Password:</strong>
   <%= @student.password %>
 </p>
 
@@ -20,10 +20,6 @@
   <%= @student.teacher_id %>
 </p>
 
-<p>
-  <strong>Score:</strong>
-  <%= @student.score %>
-</p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Back', teacher_dashboard_path(:id) %>

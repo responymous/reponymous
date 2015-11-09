@@ -53,13 +53,10 @@
         <p class="splash-subhead">
 
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
-          <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
-          <%= link_to 'Create Topics', topics_path(@current_user), class: "pure-button pure-button-primary" %>
+          <%= link_to 'Edit Students', students_path(@current_user), class: "pure-button pure-button-primary" %>
+          <%= link_to 'Create Topics', new_topic_path, class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Topics', edit_topic_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Delete Topics', topic_path(@current_user), class: "pure-button pure-button-primary" %>
-
-          <!-- <%= button_to 'Reset Score', teacher_dashboard_path, class: "pure-button pure-button-primary" %> -->
-
           <p class="avg-heading">Average</p>
           <p class="teacher-score"><%= Score.average[1] %></p>
           <p class="numscore-heading">Number of Scores</p>

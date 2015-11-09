@@ -11,11 +11,12 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to teacher_dashboard_path, notice: 'teacher was successfully created.'
+      redirect_to teacher_path, notice: 'teacher was successfully created.'
     else
       render :new
     end
   end
+
 
 
   def update
@@ -31,11 +32,6 @@ class TeachersController < ApplicationController
   end
 
 
-  def show
-    # @average = Score.score.average[1]
-    # @score_average = Student.score.score_avg
-    # @reset = Student.reset_score
-  end
 
   def edit
     @teacher = Teacher.find(params[:id])
