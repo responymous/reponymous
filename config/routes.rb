@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'scores/change' 
+
   get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
   get 'student_dashboard' => 'dashboard#student_dashboard'
 
