@@ -207,9 +207,6 @@ input.pure-button-primary {
     font-size: 150px;
     font-weight: bold;
     color: white;
-
-    display: inline-block;
-
     margin-top: 60px;
     margin-bottom: 90px;
     /*border: 3px solid white;
@@ -223,7 +220,7 @@ input.pure-button-primary {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    display: inline-block;
+    display: block;
 }
 
 .numscore-heading {
@@ -231,7 +228,6 @@ input.pure-button-primary {
     font-weight: bold;
     color: white;
     display: inline-block;
-    margin-left: 100px;
 }
 
 /*
