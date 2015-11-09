@@ -36,13 +36,10 @@ class TeachersController < ApplicationController
   end
 
 
-<<<<<<< HEAD
-=======
   def show
     # @average = Score.score.average[1]
     # @score_average = Student.score.score_avg
   end
->>>>>>> 47ed2e602b91567142e3f92ad13d34664eb7a00f
 
   def edit
     @teacher = Teacher.find(params[:id])
