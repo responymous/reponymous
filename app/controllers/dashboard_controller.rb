@@ -5,6 +5,7 @@ class DashboardController < ApplicationController
   def teacher_dashboard
     @teacher = @current_user
     @topic_scores = Score.where(topic_id: 2)#@current_user.current_topic_id)
+    
     # @average = Score.where(student_id: @current_user).score_avg
   end
 
