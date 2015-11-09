@@ -62,7 +62,7 @@ class TeachersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def teacher_params
-      params.require(:teacher).permit(:name, :email, :password)
+      params.require(:teacher).permit(:name, :email, :password, :current_topic_id)
     end
 
     def allow_access?
