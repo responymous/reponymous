@@ -2,7 +2,9 @@ class DashboardController < ApplicationController
   before_action :logged_in?
 
   def teacher_dashboard
-    @average = Score.where(student_id: @current_user)
+    @teacher = Teacher.find_by_id(session[:user_id])
+    @topic_scores = Score.where(topic_id: 2)
+
     # @average = Score.where(student_id: @current_user).score_avg
   end
 

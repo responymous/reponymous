@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-
-
-  resources :topics
-  get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
+  get 'teacher_dashboard/:id', to: 'dashboard#teacher_dashboard', as: 'teacher_dashboard'
   # post 'teacher_dashboard' => 'dashboard#teacher_dashboard'
-
   get 'student_dashboard' => 'dashboard#student_dashboard'
 
   get    'login'   => 'sessions#new'
@@ -12,6 +8,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   root 'sessions#new'
+  resources :topics
   resources :students
   resources :teachers
   # The priority is based upon order of creation: first created -> highest priority.
