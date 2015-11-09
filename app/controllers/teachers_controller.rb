@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  before_action :logged_in?, except: [:new, :create]
+  before_action :teachers_only, except: [:new, :create]
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -35,14 +35,11 @@ class TeachersController < ApplicationController
     end
   end
 
-
-<<<<<<< HEAD
-=======
   def show
     # @average = Score.score.average[1]
     # @score_average = Student.score.score_avg
   end
->>>>>>> 47ed2e602b91567142e3f92ad13d34664eb7a00f
+
 
   def edit
     @teacher = Teacher.find(params[:id])

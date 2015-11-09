@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  before_action :teachers_only
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
