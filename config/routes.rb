@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
-
   get 'teacher_dashboard/:id', to: 'dashboard#teacher_dashboard', as: 'teacher_dashboard'
   # post 'teacher_dashboard' => 'dashboard#teacher_dashboard'
-
   get 'student_dashboard' => 'dashboard#student_dashboard'
 
   get    'login'   => 'sessions#new'

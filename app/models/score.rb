@@ -13,28 +13,4 @@ class Score < ActiveRecord::Base
   #localhost:8000/teachers/{teacher_id}/{topic_id}
   #PARAMS
 
-
-  def self.average
-    scores = Array.new
-
-    topic_score = self.where(topic_id: 1)
-    topic_score.each do |n|
-      scores << n.score
-    end
-    [scores.length, scores.sum.to_f / scores.length]
-    # {"Count" => scores.length ,"Average" => scores.sum / scores.length}
-  end
-
-  # def score_avg
-  #   student_scores = Array.new
-  #
-  #   students.all.each do |student|
-  #     if student.score != nil
-  #       student_scores << student.score
-  #     end
-  #   end
-  #   average = student_scores.sum.to_f / student_scores.length
-  #   average.round(1)
-  # end
-
 end

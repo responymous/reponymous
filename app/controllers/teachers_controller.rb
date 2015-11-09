@@ -2,6 +2,10 @@ class TeachersController < ApplicationController
   before_action :logged_in?, except: [:new, :create]
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @teacher = Teacher.all
+  end
+
   def new
     @teacher = Teacher.new
   end
@@ -11,7 +15,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to teacher_path, notice: 'teacher was successfully created.'
+      redirect_to teacher_dashboard_path(:id), notice: 'teacher was successfully created.'
     else
       render :new
     end
@@ -32,6 +36,13 @@ class TeachersController < ApplicationController
   end
 
 
+<<<<<<< HEAD
+=======
+  def show
+    # @average = Score.score.average[1]
+    # @score_average = Student.score.score_avg
+  end
+>>>>>>> 47ed2e602b91567142e3f92ad13d34664eb7a00f
 
   def edit
     @teacher = Teacher.find(params[:id])
