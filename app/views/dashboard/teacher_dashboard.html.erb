@@ -41,10 +41,11 @@
           <%= link_to 'Edit Topics', topics_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= form_for(@teacher) do |f| %>
             <%= f.label :current_topic_id %>
-            <%= f.collection_select(:current_topic_id, Topic.all, :id, :title, prompt: true) %>
+            <%= f.collection_select(:current_topic_id, Topic.all, :id, :title, prompt: true, include_blank: true) %>
             <div class="actions">
               <%= f.submit %>
             </div>
+
           <% end %>
 
           <p class="avg-heading">Average</p>

@@ -24,9 +24,6 @@ class Topic < ActiveRecord::Base
     # average.round(1)
   end
 
-  def current_topic
-    @current_topic = Teacher.where(current_topic_id: @teacher)
-  end
 
 end
 
