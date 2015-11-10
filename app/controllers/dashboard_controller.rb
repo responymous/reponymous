@@ -12,6 +12,11 @@ class DashboardController < ApplicationController
   def student_dashboard
   end
 
+  def refresh
+    @current_user = Student.find_by_id(session[:user_id])
+  end
+
+
 
 
 
