@@ -4,25 +4,11 @@ class Topic < ActiveRecord::Base
   belongs_to :teacher
 
   def score_count
-    topic_scores.count
+    scores.count
   end
 
   def score_average
-<<<<<<< HEAD
-    # @topic_scores = Score.where(topic_id: @teacher)
-    @topic_scores = Array.new
-
-    @teacher.each do |student|
-      if student.score != nil
-        topic_scores << student.score
-      end
-    end
-    average = student_scores.sum.to_f / student_scores.length
-    average.round(1)
-
-    # @topic_scores = Score.where(topic_id: 1)
-    # topic_scores.average(:score).to_f
-
+    scores.average(:score)
   end
 
 

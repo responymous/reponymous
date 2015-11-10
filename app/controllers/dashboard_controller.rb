@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
 
   def teacher_dashboard
     @teacher = @current_user
-    @topic_scores = Score.where(topic_id: @current_user.current_topic_id)
+    @topic = @current_user.current_topic
 
     # @average = Score.where(student_id: @current_user).score_avg
   end
@@ -13,7 +13,7 @@ class DashboardController < ApplicationController
   end
 
   def refresh
-    @current_user = Student.find_by_id(session[:user_id])
+    
   end
 
 

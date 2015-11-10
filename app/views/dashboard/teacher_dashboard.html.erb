@@ -48,10 +48,15 @@
 
           <% end %>
 
-          <p class="avg-heading">Average</p>
-          <p class="teacher-score"><%= @topic_scores.average(:score).to_f %></p>
-          <p class="score-count">Number of Scores: <%= @topic_scores.count %></p>
+          <% if @topic %>
 
+            <p class="avg-heading">Average</p>
+            <p class="teacher-score"><%= @topic.score_average.round(1) %></p>
+            <p class="score-count">Number of Scores: <%= @topic.score_count %></p>
+
+          <% else %>
+            Select a topic to see scores!
+          <% end %>
 
         </p>
 
