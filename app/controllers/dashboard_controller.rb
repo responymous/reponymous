@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
-  before_action :teachers_only, except: :student_dashboard
-  before_action :students_only, only: :student_dashboard
+  before_action :teachers_only, except: [:student_dashboard, :refresh]
+  before_action :students_only, only: [:student_dashboard, :refresh]
 
   def teacher_dashboard
     @teacher = @current_user

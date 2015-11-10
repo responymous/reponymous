@@ -8,6 +8,7 @@ class Topic < ActiveRecord::Base
   end
 
   def score_average
+<<<<<<< HEAD
     # @topic_scores = Score.where(topic_id: @teacher)
     @topic_scores = Array.new
 

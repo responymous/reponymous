@@ -14,6 +14,13 @@
 //= require jquery_ujs
 //= require_tree .
 
+window.setInterval('ajaxcall()', 15000);
+
+function ajaxcall() {
+  responce = $.ajax({
+    url: "/refresh/",
+  });
+}
 
 function highlight() {
   $(':input.score').click(function() {
