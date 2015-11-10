@@ -51,6 +51,16 @@
             <%= render 'teacher_button'%>
         </div>
 
+          <% if @topic %>
+
+            <p class="avg-heading">Average</p>
+            <p class="teacher-score"><%= @topic.score_average.round(1) %></p>
+            <p class="score-count">Number of Scores: <%= @topic.score_count %></p>
+
+          <% else %>
+            Select a topic to see scores!
+          <% end %>
+
         </p>
 
     </div>

@@ -23,7 +23,6 @@ function ajaxcall() {
   });
 }
 
-
 function highlight() {
   $(':input.score').click(function() {
     $('input.score').removeClass("blue");
