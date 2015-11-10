@@ -13,10 +13,6 @@ class DashboardController < ApplicationController
   end
 
 
-  def reset_topic
-    @current_user.reset_topic
-    redirect_to teacher_dashboard_path
-  end
 
 
   # For this to work...
