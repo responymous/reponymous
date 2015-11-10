@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
   get 'student_dashboard' => 'dashboard#student_dashboard'
 
+  get 'refresh' => 'dashboard#refresh'
+
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

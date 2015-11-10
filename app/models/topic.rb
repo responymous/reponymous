@@ -11,6 +11,11 @@ class Topic < ActiveRecord::Base
 
   def score_average
     @topic_scores = Score.where(topic_id: @teacher)
+  end
+
+  current_user = Teacher.find_by_id(:user_id)
+
+
     # @topic_scores.average(:score).round(1).to_f
 
     # @topic_scores = Score.where(topic_id: 1)
@@ -23,7 +28,7 @@ class Topic < ActiveRecord::Base
     # end
     # average = student_scores.sum.to_f / student_scores.length
     # average.round(1)
-  end
+
 
 
 end
