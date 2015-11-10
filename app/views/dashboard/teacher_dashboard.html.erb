@@ -39,8 +39,16 @@
           <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
           <%= link_to 'Edit Topics', topics_path(@current_user), class: "pure-button pure-button-primary" %>
+          <%= form_for(@teacher) do |f| %>
+            <%= f.label :current_topic_id %>
+            <%= f.collection_select(:current_topic_id, Topic.all, :id, :title, prompt: true) %>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %>
+
           <p class="avg-heading">Average</p>
-          <p class="teacher-score"><%= @topic_scores.average(:score).round(1).to_f %></p>
+          <p class="teacher-score"><%= @topic_scores.average(:score).to_f %></p>
           <p class="numscore-heading">Number of Scores</p>
           <p class="score-count"><%= @topic_scores.count %></p>
 
