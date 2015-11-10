@@ -13,13 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-window.setInterval('ajaxcall()', 15000);
-
-function ajaxcall() {
-  responce = $.ajax({
-    url: "http://localhost:3000/refresh/",
-  });
-}
 
 
 function highlight() {
