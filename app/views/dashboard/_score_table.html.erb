@@ -1,0 +1,12 @@
+<h3>Current Topic: <%= @current_user.current_topic_title %></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <% (1..6).each do |counter| %>
+        <td><%= button_to counter, student_path(@current_user, student: {score: counter}), class: "score", method: :patch, remote: true %></td>
+
+      <% end %>
+    </tr>
+  </tbody>
+</table>

@@ -13,7 +13,6 @@ class Topic < ActiveRecord::Base
     @topic_scores = Score.where(topic_id: @teacher)
   end
 
-  current_user = Teacher.find_by_id(:user_id)
 
 
     # @topic_scores.average(:score).round(1).to_f

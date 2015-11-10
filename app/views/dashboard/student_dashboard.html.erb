@@ -1,16 +1,9 @@
 <h1>Student Dashboard</h1>
 <h3>Raise your hand anonymously!</h3>
 
-
-
-<tbody>
-  <tr>
-    <% (1..6).each do |counter| %>
-      <td><%= button_to counter, student_path(@current_user, student: {score: counter}), class: "score", method: :patch, remote: true %></td>
-
-    <% end %>
-  </tr>
-</tbody>
+<div id='student_button'>
+  <%= render 'score_table'%>
+</div>
 
 
 <p><%= link_to 'LOGOUT', logout_path, method: :delete %></p>
