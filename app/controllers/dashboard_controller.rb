@@ -16,6 +16,10 @@ class DashboardController < ApplicationController
     @current_user = Student.find_by_id(session[:user_id])
   end
 
+  def teacher_refresh
+    @current_user = Teacher.find_by_id(session[:user_id])
+  end
+
 
 
 

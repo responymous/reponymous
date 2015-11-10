@@ -19,6 +19,7 @@ window.setInterval('ajaxcall()', 15000);
 function ajaxcall() {
   responce = $.ajax({
     url: "/refresh/",
+    url: "/teacher_refresh/",
   });
 }
 
