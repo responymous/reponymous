@@ -50,9 +50,9 @@
 
           <% if @topic %>
 
-            <p class="avg-heading">Average</p>
-            <p class="teacher-score"><%= @topic.score_average.round(1) %></p>
-            <p class="score-count">Number of Scores: <%= @topic.score_count %></p>
+          <div id= "teacher_refresh">
+              <%= render 'teacher_refresh'%>
+          </div>
 
           <% else %>
             Select a topic to see scores!
