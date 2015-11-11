@@ -4,29 +4,19 @@ class Topic < ActiveRecord::Base
   belongs_to :teacher
 
   def score_count
-    scores.count
+    last_scores.count
   end
 
   def score_average
-    scores.average(:score)
+    last_scores.sum(&:score).to_f/score_count
   end
 
+  def last_scores
+    hash = {}
+    scores.each do |score|
+      hash[score.student] = score if hash[score.student].nil? || score.created_at > hash[score.student].created_at
+    end
+    hash.values
+  end
 
 end
-
-# irb(main):010:0> danais_scores = Score.where(topic_id: 1)
-#   Score Load (0.2ms)  SELECT "scores".* FROM "scores" WHERE "scores"."topic_id" = ?  [["topic_id", 1]]
-# => #<ActiveRecord::Relation [#<Score id: 1, score: 6, topic_id: 1, student_id: 1, created_at: "2015-11-07 22:55:01", updated_at: "2015-11-07 22:55:01">, #<Score id: 2, score: 6, topic_id: 1, student_id: 2, created_at: "2015-11-07 22:55:01", updated_at: "2015-11-07 22:55:01">, #<Score id: 3, score: 6, topic_id: 1, student_id: 4, created_at: "2015-11-07 22:55:01", updated_at: "2015-11-07 22:55:01">]>
-# irb(main):011:0> danais_scores.average(:id).to_f
-#    (0.3ms)  SELECT AVG("scores"."id") FROM "scores" WHERE "scores"."topic_id" = ?  [["topic_id", 1]]
-# => 2.0
-# irb(main):012:0> danais_scores.average(:score).to_f
-#    (0.2ms)  SELECT AVG("scores"."score") FROM "scores" WHERE "scores"."topic_id" = ?  [["topic_id", 1]]
-# => 6.0
-# irb(main):013:0> danais_scores.count
-#    (0.2ms)  SELECT COUNT(*) FROM "scores" WHERE "scores"."topic_id" = ?  [["topic_id", 1]]
-# => 3
-# irb(main):014:0> danais_scores.count(:score)
-#    (0.3ms)  SELECT COUNT("scores"."score") FROM "scores" WHERE "scores"."topic_id" = ?  [["topic_id", 1]]
-# => 3
-# irb(main):015:0> danais_scores.count(:score)
