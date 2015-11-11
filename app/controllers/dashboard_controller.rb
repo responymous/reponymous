@@ -13,11 +13,12 @@ class DashboardController < ApplicationController
   end
 
   def refresh
-    
+
   end
 
   def teacher_refresh
     @current_user = Teacher.find_by_id(session[:user_id])
+    @topic = @current_user.current_topic
   end
 
 
