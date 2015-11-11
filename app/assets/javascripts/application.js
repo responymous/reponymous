@@ -13,15 +13,40 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//
 
-window.setInterval('ajaxcall()', 15000);
+// window.setInterval('ajaxcall()', 15000);
+//
+// function ajaxcall() {
+//   responce = $.ajax({
+//     url: "/refresh/",
+//     url: "/teacher_refresh/",
+//   });
+// }
 
 function ajaxcall() {
-  responce = $.ajax({
-    url: "/refresh/",
+  response = $.ajax({
     url: "/teacher_refresh/",
   });
 }
+
+$(function() {
+  if ($("#teacher_refresh").length > 0) {
+    window.setInterval('ajaxcall()', 15000);
+  }
+});
+
+function ajaxcall() {
+  response = $.ajax({
+    url: "/refresh/",
+  });
+}
+
+$(function() {
+  if ($("#student_button").length > 0) {
+    window.setInterval('ajaxcall()', 15000);
+  }
+});
 
 function highlight() {
   $(':input.score').click(function() {
