@@ -6,7 +6,11 @@
   <tbody>
     <tr>
       <% (1..6).each do |counter| %>
-        <td><%= button_to counter, scores_change_path(score: {score: counter, topic_id: @current_user.teacher.current_topic_id, student_id: @current_user.id}), class: "score", method: :patch, remote: true %></td>      <% end %>
+        <td><%= button_to counter, scores_path(score: {score: counter,
+            topic_id: @current_user.teacher.current_topic_id,
+            student_id: @current_user.id}),
+            class: "score", method: :post, remote: true %></td>
+      <% end %>
     </tr>
   </tbody>
 </table>

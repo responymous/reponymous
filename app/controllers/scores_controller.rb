@@ -1,11 +1,6 @@
 class ScoresController < ApplicationController
-  def change
-    s = Score.where(student_id: params[:score][:student_id], topic_id: params[:score][:topic_id]).first
-    if s != nil
-      s.update!(score: params[:score][:score])
-    else
-      Score.create!(score_params)
-    end
+  def create
+    Score.create!(score_params)
     render nothing: true
   end
 

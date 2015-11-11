@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'scores/change'
-  patch 'scores/change'
+  post 'scores/create'
 
   get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
   get 'student_dashboard' => 'dashboard#student_dashboard'
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
   resources :topics
   resources :students
   resources :teachers
+  resources :scores, only: :create
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
