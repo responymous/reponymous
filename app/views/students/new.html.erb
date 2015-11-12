@@ -1,5 +1,88 @@
-<h1>New Student</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
 
-<%= render 'form' %>
+    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
 
-<%= link_to 'Back', teacher_dashboard_path(:id) %>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="css/layouts/marketing.css">
+
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'Blank Stares', login_path, class: "pure-menu-heading" %>
+      <ul class="pure-menu-list">
+        <nav>
+          <ul>
+          <li class="pure-menu-item pure-menu-selected"><%= link_to 'Teacher Dashboard', teacher_dashboard_path, class: "pure-menu-link" %></li>
+
+          <li class="pure-menu-item pure-menu-selected"><%= link_to 'Logout', logout_path, method: :delete, class: "pure-menu-link" %></li>
+        </ul>
+        </nav>
+
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="teacher-splash">
+      <p id="notice"><%= notice %></p>
+        <h1 class="teacher-splash-head">New Student</h1>
+        <%= form_for(@student) do |f| %>
+          <% if @student.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+              <ul>
+              <% @student.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <h1 class="name">Name</h1>
+
+          <div class="field">
+            <%= f.label :name, class: "new-student-label" %><br>
+            <%= f.text_field :name %>
+          </div>
+          <h1 class="email">Email</h1>
+
+          <div class="field">
+            <%= f.label :email, class: "new-student-label" %><br>
+            <%= f.text_field :email %>
+          </div>
+          <h1 class="password">Password</h1>
+
+          <div class="field">
+            <%= f.label :password, class: "new-student-label" %><br>
+            <%= f.password_field :password %>
+          </div>
+        <%= f.hidden_field :teacher_id, value: @current_user.id %>
+        <div class="student">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+
+        <p class="splash-subhead">
+
+
+
+        </p>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<%= link_to 'Back', teacher_dashboard_path %>

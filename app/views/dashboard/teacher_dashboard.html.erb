@@ -39,7 +39,7 @@
             <%= f.label :current_topic_id %>
             <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
             <div class="actions">
-              <%= f.submit("Update Topic!") %>
+              <%= f.submit("Update Topic") %>
             </div>
           <% end %>
 
