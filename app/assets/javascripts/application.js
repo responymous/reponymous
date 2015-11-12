@@ -36,7 +36,7 @@ $(function() {
   }
 });
 
-function ajaxcall() {
+function student_ajaxcall() {
   response = $.ajax({
     url: "/refresh/",
   });
@@ -44,7 +44,7 @@ function ajaxcall() {
 
 $(function() {
   if ($("#student_button").length > 0) {
-    window.setInterval('ajaxcall()', 15000);
+    window.setInterval('student_ajaxcall()', 15000);
   }
 });
 
