@@ -110,6 +110,10 @@ input.pure-button-primary {
     z-index: 4;
 }
 
+.pure-menu-list {
+  color: white;
+}
+
 .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
@@ -137,14 +141,28 @@ input.pure-button-primary {
  */
 
 .splash-container {
-    background: #1f8dd6;
+     background: #eee;
+     background-size: 100%;
+     z-index: 1;
+     overflow: hidden;
+     /* The following styles are required for the "scroll-over" effect */
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     position: fixed !important;
+ }
+
+.login-splash-container {
+    background: url("576.jpg");
+    background-size: cover;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+
     position: fixed !important;
 }
 
@@ -160,25 +178,42 @@ input.pure-button-primary {
     text-transform: uppercase;
 }
 
+.login-splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 40px;
+    position: absolute;
+    top: 51px; left: 0; bottom: 0; right: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
 /* This is the main heading that appears on the blue section */
-.splash-head {
-    font-size: 20px;
+.login-splash-head {
+    font-size: 40px;
     font-weight: bold;
-    color: white;
-    border: 3px solid white;
+    color: black;
+    margin: 0px 0px;
     padding: 1em 1.6em;
+    padding-left: 0;
+    padding-top: 30px;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+
 }
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
-    font-size: 18px;
-    color: white;
+    font-size: 15px;
+    color: black;
     letter-spacing: 0.05em;
     opacity: 0.8;
-    margin-top: 50px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 .teacher-splash {
@@ -189,24 +224,39 @@ input.pure-button-primary {
     position: absolute;
     top: -100px; left: 0; bottom: 0; right: 0;
     text-align: center;
-    text-transform: uppercase;
+
 }
 
 .teacher-splash-head {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
-    color: white;
-    border: 3px solid white;
+    color: black;
+    /*border: 3px solid white;*/
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.welcome-splash-head {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  /*border: 3px solid white;*/
+  padding: 1em 1.6em;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .teacher-score {
     font-size: 150px;
     font-weight: bold;
-    color: white;
+    color: red;
     margin-top: 60px;
     margin-bottom: 90px;
 }
@@ -214,7 +264,7 @@ input.pure-button-primary {
 .score-count {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: black;
     margin-top: 45px;
     margin-bottom: 90px;
 }
@@ -222,7 +272,7 @@ input.pure-button-primary {
 .avg-heading {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: black;
     display: block;
 }
 

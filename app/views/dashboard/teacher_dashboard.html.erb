@@ -17,53 +17,46 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'Blank Stares', login_path, class: "pure-menu-heading" %>
+      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
+      <%= link_to 'EDIT STUDENTS', students_path, class: "pure-button pure-button-primary" %>
+      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "pure-button pure-button-primary" %>
 
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li>
-            <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li> -->
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Logout', logout_path, method: :delete, class: "pure-menu-link" %></li>
+            <%= link_to 'HOME', login_path, class: "pure-button pure-button-primary" %>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "pure-button pure-button-primary" %>
         </ul>
     </div>
 </div>
 
 <div class="splash-container">
     <div class="teacher-splash">
-      <p id="notice"><%= notice %></p>
+
         <h1 class="teacher-splash-head">TEACHER DASHBOARD</h1>
 
-        <p class="splash-subhead">
+          <h1 class="welcome-splash-head">Welcome <%= @teacher.name %></h1>
 
-          <h1>Welcome: <%= @teacher.name %></h1>
-
-          <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
-          <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
-          <%= link_to 'Edit Topics', topics_path(@current_user), class: "pure-button pure-button-primary" %>
           <%= form_for(@teacher) do |f| %>
             <%= f.label :current_topic_id %>
             <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
             <div class="actions">
               <%= f.submit("Update Topic!") %>
             </div>
-              <% end %>
-            <%= form_for(@teacher) do |f| %>
+          <% end %>
+
+          <%= form_for(@teacher) do |f| %>
             <%= f.hidden_field :current_topic_id, value: nil %>
             <div class="actions">
                 <%= f.submit("Stop Topic!") %>
-              </div>
-
+            </div>
           <% end %>
+
           <% if @topic %>
-
-          <div id= "teacher_refresh">
-              <%= render 'teacher_refresh'%>
-          </div>
-
+            <div id= "teacher_refresh">
+                <%= render 'teacher_refresh'%>
+            </div>
           <% else %>
-            Select a topic to see scores!
+            <h2 class="empty-topic">Please select a topic.<h2>
           <% end %>
-
-        </p>
 
     </div>
 </div>

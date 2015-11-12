@@ -1,16 +1,18 @@
-<h3>My Teacher: <%= @current_user.teacher.name %></h3>
+<h1 class="welcome-splash-head">My Teacher: <%= @current_user.teacher.name %></h1>
 
-<h3>Current Topic: <%= @current_user.current_topic_title %></h3>
+<h3 class="welcome-splash-head">Current Topic: <%= @current_user.current_topic_title %></h3>
 
-<table>
-  <tbody>
-    <tr>
-      <% (1..6).each do |counter| %>
-        <td><%= button_to counter, scores_path(score: {score: counter,
-            topic_id: @current_user.teacher.current_topic_id,
-            student_id: @current_user.id}),
-            class: "score", method: :post, remote: true %></td>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
+<div class="table">
+  <table>
+    <tbody>
+      <tr>
+        <% (1..6).each do |counter| %>
+          <td><%= button_to counter, scores_path(score: {score: counter,
+              topic_id: @current_user.teacher.current_topic_id,
+              student_id: @current_user.id}),
+              class: "score", method: :post, remote: true %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
