@@ -24,7 +24,7 @@
 //   });
 // }
 
-function ajaxcall() {
+function teacher_ajaxcall() {
   response = $.ajax({
     url: "/teacher_refresh/",
   });
@@ -32,11 +32,11 @@ function ajaxcall() {
 
 $(function() {
   if ($("#teacher_refresh").length > 0) {
-    window.setInterval('ajaxcall()', 15000);
+    window.setInterval('teacher_ajaxcall()', 15000);
   }
 });
 
-function ajaxcall() {
+function student_ajaxcall() {
   response = $.ajax({
     url: "/refresh/",
   });
@@ -44,7 +44,7 @@ function ajaxcall() {
 
 $(function() {
   if ($("#student_button").length > 0) {
-    window.setInterval('ajaxcall()', 15000);
+    window.setInterval('student_ajaxcall()', 15000);
   }
 });
 
