@@ -43,13 +43,13 @@
             <%= f.label :current_topic_id %>
             <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
             <div class="actions">
-              <%= f.submit("Update Topic!") %>
+              <%= f.submit("Update Topic") %>
             </div>
               <% end %>
             <%= form_for(@teacher) do |f| %>
             <%= f.hidden_field :current_topic_id, value: nil %>
             <div class="actions">
-                <%= f.submit("Stop Topic!") %>
+                <%= f.submit("Stop Topic") %>
               </div>
 
           <% end %>

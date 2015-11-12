@@ -5,3 +5,40 @@
 .new-student-label {
   color: #1f8dd6;
 }
+
+.field {
+  text-align: left;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+
+}
+
+.email {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.password {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.actions {
+  color: #000000;
+  text-align: left;
+  text-color: #808080;
+  height: 66px;
+    input {
+      background-color: grey;
+      border-radius: 7px;
+      }
+}
