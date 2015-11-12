@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to teacher_dashboard_path(:id), notice: 'teacher was successfully created.'
+      redirect_to teacher_dashboard_path, notice: 'Teacher was successfully created.'
     else
       render :new
     end

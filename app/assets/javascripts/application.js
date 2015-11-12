@@ -23,8 +23,8 @@
 //     url: "/teacher_refresh/",
 //   });
 // }
-
-function ajaxcall() {
+require d3
+function teacher_ajaxcall() {
   response = $.ajax({
     url: "/teacher_refresh/",
   });
@@ -32,7 +32,7 @@ function ajaxcall() {
 
 $(function() {
   if ($("#teacher_refresh").length > 0) {
-    window.setInterval('ajaxcall()', 15000);
+    window.setInterval('teacher_ajaxcall()', 15000);
   }
 });
 
