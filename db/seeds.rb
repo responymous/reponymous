@@ -38,47 +38,14 @@ Topic.create!(title: "Mailers", teacher_id: 3)      #Topic ID: 3
 Topic.create!(title: "jQuery", teacher_id: 3)
 Topic.create!(title: "Instance Variables", teacher_id: 3)
 
-# Teacher 1 with students(1-3) scores for Topic 1:
-Score.create!(score: 6, student_id: 1, topic_id: 1)
-Score.create!(score: 4, student_id: 2, topic_id: 1)
-Score.create!(score: 4, student_id: 3, topic_id: 1)
+counter = Time.now - 9.days
 
-# Teacher 1 with students(1-3) scores for Topic 2:
-Score.create!(score: 4, student_id: 1, topic_id: 2)
-Score.create!(score: 2, student_id: 2, topic_id: 2)
-Score.create!(score: 3, student_id: 3, topic_id: 2)
-
-# Teacher 1 with students(1-3) scores for Topic 3:
-Score.create!(score: 4, student_id: 1, topic_id: 3)
-Score.create!(score: 6, student_id: 2, topic_id: 3)
-Score.create!(score: 6, student_id: 3, topic_id: 3)
-
-# Teacher 2 with students(4-6) scores for Topic 4:
-Score.create!(score: 1, student_id: 4, topic_id: 4)
-Score.create!(score: 6, student_id: 5, topic_id: 4)
-Score.create!(score: 6, student_id: 6, topic_id: 4)
-
-# Teacher 2 with students(4-6) scores for Topic 5:
-Score.create!(score: 1, student_id: 4, topic_id: 5)
-Score.create!(score: 3, student_id: 5, topic_id: 5)
-Score.create!(score: 6, student_id: 6, topic_id: 5)
-
-# Teacher 2 with students(4-6) scores for Topic 6:
-Score.create!(score: 1, student_id: 4, topic_id: 6)
-Score.create!(score: 2, student_id: 5, topic_id: 6)
-Score.create!(score: 1, student_id: 6, topic_id: 6)
-
-# Teacher 3 with students(7-9) scores for Topic 7:
-Score.create!(score: 4, student_id: 7, topic_id: 7)
-Score.create!(score: 4, student_id: 8, topic_id: 7)
-Score.create!(score: 1, student_id: 9, topic_id: 7)
-
-# Teacher 3 with students(7-9) scores for Topic 8:
-Score.create!(score: 4, student_id: 7, topic_id: 8)
-Score.create!(score: 4, student_id: 8, topic_id: 8)
-Score.create!(score: 4, student_id: 9, topic_id: 8)
-
-# Teacher 3 with students(7-9) scores for Topic 3:
-Score.create!(score: 5, student_id: 7, topic_id: 9)
-Score.create!(score: 4, student_id: 8, topic_id: 9)
-Score.create!(score: 3, student_id: 9, topic_id: 9)
+Topic.all.each do |t|
+  100.times do |i|
+    Score.create!(score: rand(6)+1,
+        student: topic.teacher.students.sample,
+        topic: t,
+        created_at: counter += rand(216)+1)
+  end
+  counter += 21.hours
+end
