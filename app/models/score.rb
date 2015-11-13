@@ -1,6 +1,14 @@
 class Score < ActiveRecord::Base
   belongs_to :student
   belongs_to :topic
+  after_create :calculate_average_thus_far
+
+  private
+  def calculate_average_thus_far
+    self.update!(average_thus_far: topic.score_average)
+  end
+
+end
 
   # Average score based on scores input by students.
 
@@ -12,5 +20,3 @@ class Score < ActiveRecord::Base
   #localhost:8000/teachers/{teacher_id}
   #localhost:8000/teachers/{teacher_id}/{topic_id}
   #PARAMS
-
-end

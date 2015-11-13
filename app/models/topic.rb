@@ -19,4 +19,13 @@ class Topic < ActiveRecord::Base
     hash.values
   end
 
+  #return an array of hashes
+  def all_scores
+    scores_array = []
+    self.scores.each do |score|
+      scores_array << {date: score.created_at, close: score.average_thus_far}
+    end
+    scores_array
+  end
+
 end
