@@ -27,6 +27,10 @@ label {
   color: black;
 }
 
+/*form {
+  display: block;
+}*/
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -73,12 +77,32 @@ label {
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
+
+.nav-button {
+     background-color: #0078e7;
+     color: white;
+     padding: 0.5em 2em;
+     border-radius: 5px;
+     margin-top: 6px;
+     margin-bottom: 2px;
+     text-decoration: none;
+ }
+
+ input.nav-button-primary {
+     background: #0078e7;
+     color: white;
+     border-radius: 5px;
+     font-size: 170%;
+     margin-top: 20px;
+ }
+
 .pure-button {
     background-color: #1f8dd6;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
-
+    margin-top: 6px;
+    margin-bottom: 2px;
 }
 
 input.pure-button-primary {
@@ -87,6 +111,33 @@ input.pure-button-primary {
     border-radius: 5px;
     font-size: 170%;
     margin-top: 20px;
+}
+
+.success-button {
+    background: rgb(28, 184, 65); /* this is a green */
+  }
+
+input.success-button-primary {
+    color: white;
+    border-radius: 10px;
+    font-size: 170%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.error-button {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+input.error-button-primary {
+    color: white;
+    border-radius: 10px;
+    font-size: 170%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 22px;
+    padding-left: 22px;
 }
 
 
@@ -144,8 +195,7 @@ input.pure-button-primary {
      background: #eee;
      background-size: 100%;
      z-index: 1;
-     overflow: hidden;
-     /* The following styles are required for the "scroll-over" effect */
+     overflow: auto;
      width: 100%;
      height: 100%;
      top: 0;
@@ -157,8 +207,7 @@ input.pure-button-primary {
     background: url("576.jpg");
     background-size: cover;
     z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
+    overflow: auto;
     width: 100%;
     height: 100%;
     top: 0;
@@ -227,12 +276,27 @@ input.pure-button-primary {
 
 }
 
-.teacher-splash-head {
-    font-size: 40px;
+.teacher-nav-head {
+    font-size: 14px;
     font-weight: bold;
     color: black;
     /*border: 3px solid white;*/
     padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.teacher-splash-head {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    /*border: 3px solid white;*/
+    padding: 1em 1.6em;
+    padding-top: 30px;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
@@ -266,7 +330,7 @@ input.pure-button-primary {
     font-weight: bold;
     color: black;
     margin-top: 45px;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
 }
 
 .avg-heading {
