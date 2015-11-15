@@ -3,7 +3,6 @@ class Teacher < ActiveRecord::Base
   has_many :topics
   belongs_to :current_topic, class_name: "Topic"
   after_create :all_topics
-
   has_secure_password
 
   def all_topics

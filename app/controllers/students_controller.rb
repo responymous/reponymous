@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   def show
+    @student = Student.find(params[:id])
     # @average = Score.where(student_id: @current_user)
     # @thingy = Score.average
   end

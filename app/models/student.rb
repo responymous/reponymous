@@ -10,4 +10,13 @@ class Student < ActiveRecord::Base
       "(None)"
     end
   end
+
+  def student_topics
+    topics_array = []
+    self.topics.each do |topic|
+      topics_array << {topic: topic.title, average: topic.score_average}
+    end
+    topics_array
+  end
+
 end
