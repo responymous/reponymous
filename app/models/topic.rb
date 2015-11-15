@@ -27,5 +27,4 @@ class Topic < ActiveRecord::Base
     end
     scores_array
   end
-
 end

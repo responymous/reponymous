@@ -22,5 +22,19 @@
 
 <br>
 
+
+
+
 <%= link_to 'New Topic', new_topic_path %>
-<%= link_to 'Teacher Dashboard', teacher_dashboard_path(:id) %>
+<%= link_to 'Teacher Dashboard', teacher_dashboard_path %>
+
+
+<svg id='teacher-bar-graph'></svg>
+
+<script>
+var data = <%= @current_user.all_topics.to_json.html_safe %>
+  // Sample Output
+  // [{topic: "TDD", average: 2.5},
+  //   {topic: "Mailers", average: 3.76},
+  //   {topic: "Enumerable", average: 4.9}]
+</script>

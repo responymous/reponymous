@@ -7,7 +7,6 @@ class Score < ActiveRecord::Base
   def calculate_average_thus_far
     self.update!(average_thus_far: topic.score_average)
   end
-
 end
 
   # Average score based on scores input by students.
