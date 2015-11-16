@@ -1,7 +1,7 @@
-<svg id='student-bar-graph'></svg>
+<svg id='student-graph'></svg>
 
 <script>
-var data = <%= @current_user.all_topics.to_json.html_safe %>
+var data = <%= @current_user.student_topics.to_json.html_safe %>
   // Sample Output
   // [{topic: "TDD", average: 2.5},
   //   {topic: "Mailers", average: 3.76},

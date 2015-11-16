@@ -22,7 +22,7 @@ function teacher_ajaxcall() {
   });
 }
 
-$(function() {
+$(function t() {
   if ($("#teacher_refresh").length > 0) {
     window.setInterval('teacher_ajaxcall()', 15000);
   }
@@ -34,7 +34,7 @@ function student_ajaxcall() {
   });
 }
 
-$(function() {
+$(function s() {
   if ($("#student_button").length > 0) {
     window.setInterval('student_ajaxcall()', 15000);
   }
@@ -53,6 +53,7 @@ function drawTopicsGraph() {
 
   if ($("#topics-graph").length > 0) {
     //D3 Script
+
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;

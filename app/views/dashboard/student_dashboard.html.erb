@@ -1,7 +1,7 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <ul class="pure-menu-list">
-          <%= link_to 'Topics Graph', student_path, class: "pure-button pure-button-primary" %>
+          <%= link_to 'Topics Graph', @student, class: "pure-button pure-button-primary" %>
           <%= link_to 'HOME', login_path, class: "pure-button pure-button-primary" %>
           <%= link_to 'LOGOUT', logout_path, method: :delete, class: "pure-button pure-button-primary" %>
         </ul>
