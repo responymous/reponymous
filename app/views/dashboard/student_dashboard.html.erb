@@ -1,20 +1,23 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <ul class="pure-menu-list">
-          <%= link_to 'Topics Graph', @student, class: "pure-button pure-button-primary" %>
-          <%= link_to 'HOME', login_path, class: "pure-button pure-button-primary" %>
-          <%= link_to 'LOGOUT', logout_path, method: :delete, class: "pure-button pure-button-primary" %>
+
+            <%= link_to 'Topics Graph', @student, class: "pure-button pure-button-primary" %>
+
+            <h1 class="teacher-nav-head"> Welcome back <%= @current_user.name %></h1>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+
         </ul>
     </div>
 </div>
 
 <div class="splash-container">
-  <div class="teacher-splash">
+  <div class="student-splash">
 
-    <h1 class="teacher-splash-head">STUDENT DASHBOARD</h1>
+    <h1 class="student-splash-head">STUDENT DASHBOARD</h1>
 
     <div id='student_button'>
-      <%= render 'score_table'%>
+      <%= render 'score_table' %>
     </div>
 
   </div>

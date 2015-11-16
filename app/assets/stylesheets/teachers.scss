@@ -2,10 +2,200 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.nav-bar-left:link, .nav-bar-left:visited {
+    display: block;
+    width: 135px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #DCDCDC;
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
+}
+
+.nav-bar-left:hover, .nav-bar-left:active {
+    background-color: #6699CC;
+}
+
+.nav-bar-right:link, .nav-bar-right:visited {
+    display: block;
+    width: 135px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #DCDCDC;
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+}
+
+.nav-bar-right:hover, .nav-bar-right:active {
+    background-color: #6699CC;
+}
+
+.edit_teacher {
+  display: inline-block;
+}
+
+.teacher-nav-head {
+    font-family: "Lato-regular";
+    font-size: 15px;
+    color: black;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.teacher-splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    top: -100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+
+}
+
+.teacher-splash-head {
+    font-size: 50px;
+    font-family: "Lato-regular";
+    font-weight: bold;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.avg-heading {
+    font-family: "Lato";
+    font-size: 30px;
+    color: black;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.teacher-score {
+    font-family: "Lato-black";
+    font-size: 200px;
+    color: red;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.score-count {
+    font-family: "Lato";
+    font-size: 25px;
+    color: black;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.empty-topic {
+  font-family: "Lato-black";
+  font-size: 30px;
+  color: black;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.dropdown {
+  font-size: 200px;
+}
+
 .actions {
   margin-top: 30px;
 }
 
-.empty-topic {
-  margin-top: 30px;
+#teacher_current_topic_id {
+  width: 200px;
+  height: 100px;
+  font-size: 100px;
+  margin-right: 50px;
+}
+
+.teacher-button-primary {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-bottom: 31px;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
+
+input.teacher-button-primary {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-bottom: 31px;
+    margin-left: 10px;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
+
+.teacher-row {
+  margin-top: 50px;
+  display: block;
+}
+
+.teacher-edit-labels {
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input.form-control {
+  margin-right: 50px;
+  margin-left: 10px;
+  height: 35px;
+  font-size: 16px;
+}
+
+.edit-teacher-button {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-top: 70px;
+    margin-bottom: 31px;
+    margin-left: 10px;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
 }
