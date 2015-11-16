@@ -2,10 +2,9 @@ function drawStudentGraph(){
 
   if ($("#student-graph").length > 0){
     var margin = {top: 20, right: 20, bottom: 30, left: 40},
-      width = 400 - margin.left - margin.right,
+      width = 600 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
-    var parseDate = d3.time.format("%A,%W").parse;
 
 
     var x = d3.scale.ordinal()
@@ -30,8 +29,8 @@ function drawStudentGraph(){
        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-        x.domain(d3.extent(data, function(d) { return d.topic; }));
-        y.domain([0, 6]);
+       x.domain(data.map(function(d) { return d.topic; }));
+       y.domain([0, 6]);
 
       svg.append("g")
           .attr("class", "x axis")
