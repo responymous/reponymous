@@ -5,7 +5,7 @@
       <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "nav-bar-left" %>
       <%= link_to 'EDIT STUDENTS', students_path, class: "nav-bar-left" %>
       <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
-      <%= link_to 'TOPICS GRAPH', topic_path(@current_user), class: "pure-button pure-button-primary" %>
+      <%= link_to 'TOPICS GRAPH', topic_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
             <h1 class="teacher-nav-head">Welcome back <%= @teacher.name %></h1>

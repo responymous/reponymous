@@ -199,3 +199,46 @@ input.form-control {
       background-color: #538cc5;
     }
 }
+
+.topics-splash-head {
+    font-size: 50px;
+    font-family: "Lato-regular";
+    font-weight: bold;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+}
+
+.topics-table {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 38px;
+}
+
+.topics-page {
+  font-size: 20px;
+}
+
+.topic-button-primary {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-bottom: 31px;
+    margin-left: 50px;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
+
+#teacher-bar-graph {
+  display: inline-block;
+}

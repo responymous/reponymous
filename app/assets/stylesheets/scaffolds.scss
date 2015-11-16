@@ -28,13 +28,14 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
 
   &:visited {
     color: #fff;
   }
 
   &:hover {
-    color: #fff;
+    color: #6699CC;
     background-color: #538cc5;
   }
 }
