@@ -1,8 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "nav-bar-left" %>
+      <%= link_to 'EDIT STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
-<h1>Listing Topics</h1>
+        <ul class="pure-menu-list">
 
-<table>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+        </ul>
+    </div>
+</div>
+
+<h1 class="topics-splash-head">TOPICS</h1>
+
+<table class="topics-table">
   <thead>
     <tr>
       <th colspan="3"></th>
@@ -12,24 +23,20 @@
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= topic.title %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="topics-page"><%= topic.title %></td>
+        <td class="topics-page"><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td class="topics-page"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-
-
-
-<%= link_to 'New Topic', new_topic_path %>
-<%= link_to 'Teacher Dashboard', teacher_dashboard_path %>
-
-
-<svg id='teacher-bar-graph'></svg>
+<%= link_to 'NEW TOPIC', new_topic_path, class: "pure-button topic-button-primary" %>
+<%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "pure-button teacher-button-primary" %>
+<div>
+  <svg id='teacher-bar-graph'></svg>
+</div>
 
 <script>
 var data = <%= @current_user.all_topics.to_json.html_safe %>

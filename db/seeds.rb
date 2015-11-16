@@ -49,5 +49,3 @@ Topic.all.each do |t|
  end
  counter += 21.hours
 end
-
-# Teacher 1 with students(1-3) scores for Topic 1:

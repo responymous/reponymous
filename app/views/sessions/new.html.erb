@@ -1,10 +1,10 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to '', login_path, class: "pure-menu-heading" %>
+      <!-- <%= link_to '', login_path, class: "pure-menu-heading" %> -->
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li>
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Sign Up', new_teacher_path, class: "pure-menu-link" %></li>
+            <!-- <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li> -->
+            <%= link_to ' Teacher Sign Up', new_teacher_path, class: "login-nav-right" %>
         </ul>
     </div>
 </div>
@@ -18,14 +18,14 @@
         <p class="splash-subhead">
 
           <%= form_tag(login_path) do  %>
-            <p><%= email_field_tag :email %></p>
             <p><%= label_tag :email %></p>
+            <p><%= email_field_tag :email %></p>
 
-            <p><%= password_field_tag :password %></p>
             <p><%= label_tag :password %></p>
+            <p><%= password_field_tag :password %></p>
 
             <p>
-              <%= submit_tag "Get Started", class: "pure-button pure-button-primary" %>
+              <%= submit_tag "GET STARTED", class: "pure-button pure-button-primary" %>
             </p>
 
           <% end %>
