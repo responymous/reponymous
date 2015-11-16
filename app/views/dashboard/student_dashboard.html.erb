@@ -2,7 +2,7 @@
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <ul class="pure-menu-list">
             <h1 class="teacher-nav-head"> Welcome back <%= @current_user.name %></h1>
-            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-button nav-button-primary" %>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
         </ul>
     </div>
 </div>
@@ -13,7 +13,7 @@
     <h1 class="student-splash-head">STUDENT DASHBOARD</h1>
 
     <div id='student_button'>
-      <%= render 'score_table'%>
+      <%= render 'score_table' %>
     </div>
 
   </div>

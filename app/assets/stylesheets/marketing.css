@@ -97,49 +97,26 @@ label {
  }
 
 .pure-button {
-    background-color: #1f8dd6;
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-top: 20px;
+    /*background-color: #1f8dd6;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
     margin-top: 6px;
-    margin-bottom: 2px;
+    margin-bottom: 2px;*/
 }
 
 input.pure-button-primary {
-    background: #0078e7;
+    background: #6699CC;
     color: white;
     border-radius: 5px;
-    font-size: 170%;
+    font-size: 118%;
     margin-top: 20px;
 }
-
-.success-button {
-    background: rgb(28, 184, 65); /* this is a green */
-  }
-
-input.success-button-primary {
-    color: white;
-    border-radius: 10px;
-    font-size: 170%;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.error-button {
-    background: rgb(202, 60, 60); /* this is a maroon */
-}
-
-input.error-button-primary {
-    color: white;
-    border-radius: 10px;
-    font-size: 170%;
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 22px;
-    padding-left: 22px;
-}
-
 
 /*
  * -- MENU STYLES --
@@ -152,7 +129,7 @@ input.error-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: gray;
+    background: #DCDCDC;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -185,6 +162,30 @@ input.error-button-primary {
     color: #AECFE5;
 }
 
+.login-nav-right:link, .login-nav-right:visited {
+    display: block;
+    width: 160px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #DCDCDC;
+    text-align: center;
+    margin-top: 2px;
+    margin-right: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+}
+
+.login-nav-right:hover, .login-nav-right:active {
+    background-color: #6699CC;
+}
+
 
 /*
  * -- SPLASH STYLES --
@@ -208,7 +209,7 @@ input.error-button-primary {
     background-size: cover;
     z-index: 1;
     overflow: auto;
-    width: 100%;
+    width: 105%;
     height: 100%;
     top: 0;
 
@@ -242,7 +243,7 @@ input.error-button-primary {
 
 /* This is the main heading that appears on the blue section */
 .login-splash-head {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     color: black;
     margin: 0px 0px;
@@ -265,79 +266,18 @@ input.error-button-primary {
     margin-bottom: 50px;
 }
 
-.teacher-splash {
-    /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 70%;
-    margin: auto;
-    position: absolute;
-    top: -100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
-
-}
-
-.teacher-nav-head {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-    /*border: 3px solid white;*/
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: inline-block;
-}
-
-.teacher-splash-head {
-    font-size: 50px;
-    font-weight: bold;
-    color: black;
-    /*border: 3px solid white;*/
-    padding: 1em 1.6em;
-    padding-top: 30px;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 .welcome-splash-head {
   font-size: 30px;
+  font-family: "Lato-regular";
   font-weight: bold;
   color: black;
-  /*border: 3px solid white;*/
   padding: 1em 1.6em;
+  padding-left: 0;
   font-weight: 100;
   border-radius: 5px;
   line-height: 1em;
   margin-top: 0px;
   padding-top: 0px;
-}
-
-.teacher-score {
-    font-size: 150px;
-    font-weight: bold;
-    color: red;
-    margin-top: 60px;
-    margin-bottom: 90px;
-}
-
-.score-count {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    margin-top: 45px;
-    margin-bottom: 20px;
-}
-
-.avg-heading {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    display: block;
 }
 
 .numscore-heading {

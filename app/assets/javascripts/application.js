@@ -24,6 +24,15 @@
 //   });
 // }
 
+var defaulttext = $('.defualt-text').text();
+
+$('.selectDefault').text(defaulttext);
+
+$('.selectBox').on('change',function(){
+   var defaulttext2 = $('.selectBox').find(":selected").text();
+    $('.selectDefault').text(defaulttext2);
+});
+
 function teacher_ajaxcall() {
   response = $.ajax({
     url: "/teacher_refresh/",
@@ -36,17 +45,17 @@ $(function() {
   }
 });
 
-// function student_ajaxcall() {
-//   response = $.ajax({
-//     url: "/refresh/",
-//   });
-// }
-//
-// $(function() {
-//   if ($("#student_button").length > 0) {
-//     window.setInterval('student_ajaxcall()', 15000);
-//   }
-// });
+function student_ajaxcall() {
+  response = $.ajax({
+    url: "/refresh/",
+  });
+}
+
+$(function() {
+  if ($("#student_button").length > 0) {
+    window.setInterval('student_ajaxcall()', 15000);
+  }
+});
 
 function highlight() {
   $(':input.score').click(function() {

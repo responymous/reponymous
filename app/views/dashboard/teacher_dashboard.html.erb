@@ -1,13 +1,13 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
-      <%= link_to 'EDIT STUDENTS', students_path, class: "pure-button pure-button-primary" %>
-      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "pure-button pure-button-primary" %>
+      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "nav-bar-left" %>
+      <%= link_to 'EDIT STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
-            <h1 class="teacher-nav-head">Welcome back <%= @teacher.name %>.</h1>
-            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-button nav-button-primary" %>
+            <h1 class="teacher-nav-head">Welcome back <%= @teacher.name %></h1>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
         </ul>
     </div>
 </div>
@@ -16,29 +16,32 @@
     <div class="teacher-splash">
 
         <h1 class="teacher-splash-head">TEACHER DASHBOARD</h1>
+          <div>
+              <% if @topic %>
+                <div id= "teacher_refresh">
+                  <%= render 'teacher_refresh'%>
+                </div>
+              <% else %>
+                <div class="empty-topic">Please select a topic.</div>
+              <% end %>
+          </div>
 
-          <% if @topic %>
-            <div id= "teacher_refresh">
-              <%= render 'teacher_refresh'%>
-            </div>
-          <% else %>
-            <h2 class="empty-topic">Please select a topic.<h2>
-          <% end %>
+          <div>
+              <%= form_for(@teacher) do |f| %>
+                <%= f.label :current_topic, "CURRENT TOPIC", class: "welcome-splash-head" %>
+                <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
+                <div class="actions">
+                  <%= f.submit "UPDATE TOPIC", class: "pure-button teacher-button-primary" %>
+                </div>
+              <% end %>
 
-          <%= form_for(@teacher) do |f| %>
-            <%= f.label :current_topic_id, class: "welcome-splash-head" %>
-            <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
-            <div class="actions">
-              <%= f.submit "Update Topic", class: "success-button success-button-primary" %>
-            </div>
-          <% end %>
-
-          <%= form_for(@teacher) do |f| %>
-            <%= f.hidden_field :current_topic_id, value: nil %>
-            <div class="actions">
-                <%= f.submit "Stop Topic!", class: "error-button error-button-primary" %>
-            </div>
-          <% end %>
+              <%= form_for(@teacher) do |f| %>
+                <%= f.hidden_field :current_topic_id, value: nil %>
+                <div class="actions">
+                    <%= f.submit "STOP TOPIC", class: "pure-button teacher-button-primary" %>
+                </div>
+              <% end %>
+          </div>
 
     </div>
 </div>

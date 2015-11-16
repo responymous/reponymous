@@ -13,6 +13,7 @@
 }
 
 .student-splash-head {
+    font-family: "Lato-regular";
     font-size: 50px;
     font-weight: bold;
     color: black;
@@ -26,8 +27,8 @@
 }
 
 .student-topic {
-  font-size: 25px;
-  font-weight: bold;
+  font-family: "Lato-regular";
+  font-size: 30px;
   color: black;
   padding: 1em 1.6em;
   padding-top: 0px;
@@ -43,6 +44,8 @@ table {
 }
 
 input.score {
+  font-family: "Lato-regular";
+  font-size: 100px;
   background: white;
   padding-top: 50px;
   padding-bottom: 50px;
