@@ -12,11 +12,11 @@ class Student < ActiveRecord::Base
   end
 
   def student_topics
-    topics_array = []
-    self.topics.each do |topic|
-      topics_array << {topic: topic.title, average: topic.score_average}
+    scores_array = []
+    self.scores.each do |score|
+      scores_array << {topic: score.topic_id, average: score.average_thus_far}
     end
-    topics_array
+    scores_array
   end
 
 end

@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :teachers_only
+  before_action :teachers_only, except: [:show]
+  before_action :students_only, only: [:show]
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   # GET /students
