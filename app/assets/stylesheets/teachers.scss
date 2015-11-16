@@ -4,14 +4,15 @@
 
 .nav-bar-left:link, .nav-bar-left:visited {
     display: block;
-    width: 135px;
+    width: 100px;
     font-family: "Lato";
     font-size: 16px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #DCDCDC;
+    color: #fff;
+    background-color: #2f5984;
     text-align: center;
     margin-top: 2px;
+    margin-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 8px;
@@ -21,18 +22,18 @@
     float: left;
 }
 
-.nav-bar-left:hover, .nav-bar-left:active {
-    background-color: #6699CC;
-}
+// .nav-bar-left:hover, .nav-bar-left:active {
+//     background-color: #6699CC;
+// }
 
-.nav-bar-right:link, .nav-bar-right:visited {
+.profile-right:link, .profile-right:visited {
     display: block;
-    width: 135px;
+    width: 180px;
     font-family: "Lato";
     font-size: 16px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #DCDCDC;
+    color: #B59435;
+    background-color: #2f5984;
     text-align: center;
     margin-top: 2px;
     padding-top: 10px;
@@ -44,9 +45,28 @@
     float: right;
 }
 
-.nav-bar-right:hover, .nav-bar-right:active {
-    background-color: #6699CC;
+.nav-bar-right:link, .nav-bar-right:visited {
+    display: block;
+    width: 135px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2f5984;
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
 }
+
+// .nav-bar-right:hover, .nav-bar-right:active {
+//     background-color: #6699CC;
+// }
 
 .edit_teacher {
   display: inline-block;
@@ -55,7 +75,7 @@
 .teacher-nav-head {
     font-family: "Lato-regular";
     font-size: 15px;
-    color: black;
+    color: #B59435;
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
@@ -105,22 +125,22 @@
     color: red;
     margin-top: 60px;
     margin-bottom: 90px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .score-count {
     font-family: "Lato";
     font-size: 25px;
     color: black;
-    margin-top: 45px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .empty-topic {
-  font-family: "Lato-black";
+  font-family: "Lato";
   font-size: 30px;
-  color: black;
+  color: #808080;
   margin-top: 70px;
   margin-bottom: 50px;
 }
@@ -130,14 +150,13 @@
 }
 
 .actions {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 #teacher_current_topic_id {
   width: 200px;
-  height: 100px;
+  height: 0px;
   font-size: 100px;
-  margin-right: 50px;
 }
 
 .teacher-button-primary {
@@ -219,26 +238,17 @@ input.form-control {
   text-align: left;
   margin-top: 25px;
   margin-left: 38px;
+  float: left;
 }
 
 .topics-page {
   font-size: 20px;
 }
 
-.topic-button-primary {
-    background: #6699CC;
-    color: white;
-    border-radius: 5px;
-    font-size: 118%;
-    margin-bottom: 31px;
-    margin-left: 50px;
-
-    &:hover {
-      color: #fff;
-      background-color: #538cc5;
-    }
-}
-
 #teacher-bar-graph {
   display: inline-block;
+}
+
+.topic-progress {
+  height: 70px;
 }

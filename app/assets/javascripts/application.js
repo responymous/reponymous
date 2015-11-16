@@ -45,18 +45,18 @@ $(function t() {
     window.setInterval('teacher_ajaxcall()', 15000);
   }
 });
-
-function student_ajaxcall() {
-  response = $.ajax({
-    url: "/refresh/",
-  });
-}
-
-$(function s() {
-  if ($("#student_button").length > 0) {
-    window.setInterval('student_ajaxcall()', 15000);
-  }
-});
+// 
+// function student_ajaxcall() {
+//   response = $.ajax({
+//     url: "/refresh/",
+//   });
+// }
+//
+// $(function s() {
+//   if ($("#student_button").length > 0) {
+//     window.setInterval('student_ajaxcall()', 15000);
+//   }
+// });
 
 function highlight() {
   $(':input.score').click(function() {
