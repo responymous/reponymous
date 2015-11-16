@@ -12,9 +12,15 @@ class Student < ActiveRecord::Base
   end
 
   def student_topics
+    hash = {}
+    scores.each do |score|
+      hash[score.topic] ||= []
+      hash[score.topic] << score.score
+    end
+
     scores_array = []
-    self.scores.each do |score|
-      scores_array << {topic: score.topic_id, average: score.average_thus_far}
+    hash.each do |topic, numbers|
+      scores_array << {topic: topic.title, average: numbers.sum.to_f / numbers.count}
     end
     scores_array
   end
