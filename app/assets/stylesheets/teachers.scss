@@ -32,7 +32,7 @@
     font-family: "Lato";
     font-size: 16px;
     font-weight: bold;
-    color: #B59435;
+    color: #fff;
     background-color: #2f5984;
     text-align: center;
     margin-top: 2px;
@@ -132,7 +132,7 @@
 .score-count {
     font-family: "Lato";
     font-size: 25px;
-    color: black;
+    color: #808080;
     margin-top: 10px;
     margin-bottom: 0px;
 }
@@ -165,6 +165,7 @@
     border-radius: 5px;
     font-size: 118%;
     margin-bottom: 31px;
+    margin-left: 10px;
 
     &:hover {
       color: #fff;

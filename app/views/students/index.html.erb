@@ -1,12 +1,11 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "nav-bar-left" %>
-      <%= link_to 'EDIT STUDENTS', students_path, class: "nav-bar-left" %>
-      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
+      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
-            <h1 class="teacher-nav-head"> Instructor: <%= @current_user.name %></h1>
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
         </ul>
     </div>
