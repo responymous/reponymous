@@ -76,6 +76,7 @@ function drawTopicsGraph() {
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
+
     var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%S.%LZ").parse;
 
     var x = d3.time.scale()
@@ -98,6 +99,10 @@ function drawTopicsGraph() {
         .y0(height)
         .y1(function(d) { return y(d.close); });
 
+    var line = d3.svg.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.close); });
+
     var svg = d3.select("#topics-graph")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -117,6 +122,11 @@ function drawTopicsGraph() {
         .attr("class", "area")
         .attr("d", area);
 
+    svg.append("path")
+      .datum(data)
+      .attr("class", "top-line")
+      .attr("d", line);
+
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -125,6 +135,7 @@ function drawTopicsGraph() {
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
+
 
   }
 }
