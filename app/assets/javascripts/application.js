@@ -45,7 +45,7 @@ $(function t() {
     window.setInterval('teacher_ajaxcall()', 15000);
   }
 });
-// 
+//
 // function student_ajaxcall() {
 //   response = $.ajax({
 //     url: "/refresh/",
@@ -99,6 +99,10 @@ function drawTopicsGraph() {
         .y0(height)
         .y1(function(d) { return y(d.close); });
 
+    var line = d3.svg.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.close); });
+
     var svg = d3.select("#topics-graph")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -117,6 +121,11 @@ function drawTopicsGraph() {
         .datum(data)
         .attr("class", "area")
         .attr("d", area);
+
+    svg.append("path")
+      .datum(data)
+      .attr("class", "top-line")
+      .attr("d", line);
 
     svg.append("g")
         .attr("class", "x axis")
