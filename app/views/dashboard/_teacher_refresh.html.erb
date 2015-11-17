@@ -1,3 +1,3 @@
   <div class="avg-heading">Average Score for <%= @topic.title %></div>
-  <div class="teacher-score"><%= @topic.score_average.round(1) %></div>
+  <div class="teacher-score" id="teacher_score_<%= @topic.score_average.round() %>"><%= @topic.score_average.round(1) %></div>
   <div class="score-count">Students Scoring: <%= @topic.score_count %></div>

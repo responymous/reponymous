@@ -45,7 +45,7 @@ $(function t() {
     window.setInterval('teacher_ajaxcall()', 15000);
   }
 });
-// 
+//
 // function student_ajaxcall() {
 //   response = $.ajax({
 //     url: "/refresh/",
@@ -130,3 +130,20 @@ function drawTopicsGraph() {
 }
 
 $(drawTopicsGraph);
+
+// $(document).ready(function(){
+//   var text = $('.teacher-score').text();
+//   if (0 < text &&  text <= 1) {
+//     $('.teacher-score').attr('id', 'teacher_score_1');
+//   } else if (1 < text && text <= 2) {
+//     $('.teacher-score').attr('id', 'teacher_score_2');
+//   } else if (2 < text && text <= 3) {
+//     $('.teacher-score').attr('id', 'teacher_score_3');
+//   } else if (3 < text && text <= 4) {
+//     $('.teacher-score').attr('id', 'teacher_score_4');
+//   } else if (4 < text && text <= 5) {
+//     $('.teacher-score').attr('id', 'teacher_score_5');
+//   } else if (5 < text && text <= 6) {
+//     $('.teacher-score').attr('id', 'teacher_score_6');
+//   }
+// })

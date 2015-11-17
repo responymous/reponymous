@@ -153,12 +153,6 @@
   margin-top: 20px;
 }
 
-#teacher_current_topic_id {
-  width: 200px;
-  height: 0px;
-  font-size: 100px;
-}
-
 .teacher-button-primary {
     background: #6699CC;
     color: white;
@@ -178,7 +172,7 @@ input.teacher-button-primary {
     color: white;
     border-radius: 5px;
     font-size: 118%;
-    margin-bottom: 31px;
+    margin-bottom: 29px;
     margin-left: 10px;
 
     &:hover {
@@ -242,8 +236,8 @@ input.form-control {
   float: left;
 }
 
-.topics-page {
-  font-size: 20px;
+select {
+  height: 20px;
 }
 
 #teacher-bar-graph {
@@ -252,4 +246,35 @@ input.form-control {
 
 .topic-progress {
   height: 70px;
+}
+
+
+#teacher_score_1 {
+  color: hsl(0, 50, 50);
+}
+
+#teacher_score_2 {
+  color: hsl(24, 50, 50);
+}
+
+#teacher_score_3 {
+  color: hsl(48, 50, 50);
+}
+
+#teacher_score_4 {
+  color: hsl(72, 50, 50);
+}
+
+#teacher_score_5 {
+  color: hsl(96, 50, 50);
+}
+
+#teacher_score_6 {
+  color: hsl(120, 50, 50);
+}
+
+.select-class {
+  font-size: 1.6em;
+  height: 1.6em;
+  -webkit-appearance: menulist-button;
 }

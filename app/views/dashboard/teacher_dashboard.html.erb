@@ -36,7 +36,7 @@
                 <div class="empty-topic">No topic is currently active. &nbsp;Please select a topic to begin.</div>
                 <div>
                     <%= form_for(@teacher) do |f| %>
-                      <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
+                      <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, {prompt: true}, {class: "select-class"}) %>
                       <div class="actions">
                         <%= f.submit "CHANGE TOPIC", class: "pure-button teacher-button-primary" %>
                       </div>
