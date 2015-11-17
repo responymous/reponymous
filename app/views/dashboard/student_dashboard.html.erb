@@ -3,7 +3,7 @@
       <%= link_to 'STUDENT TOPICS', student_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
-            <h1 class="teacher-nav-head"> Welcome back <%= @current_user.name %></h1>
+            <h1 class="teacher-nav-head"> SIGNED IN AS <%= @current_user.name %></h1>
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
         </ul>
     </div>

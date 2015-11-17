@@ -1,6 +1,6 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
       <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
       <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
@@ -24,8 +24,8 @@
       <% @topics.each do |topic| %>
         <tr>
           <td class="topics-page"><%= topic.title %></td>
-          <td class="topics-page"><%= link_to 'Edit', edit_topic_path(topic) %></td>
-          <td class="topics-page"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="topics-page"><%= link_to edit_topic_path(topic) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+
         </tr>
       <% end %>
     </tbody>

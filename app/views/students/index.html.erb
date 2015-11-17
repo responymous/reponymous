@@ -1,7 +1,7 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
       <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
       <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
@@ -12,33 +12,33 @@
 </div>
 
 <div class="splash-container">
-    <div class="teacher-splash">
+    <div class="student-splash">
 
         <h1 class="teacher-splash-head">STUDENTS</h1>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @students.each do |student| %>
+        <div>
+          <table class="student-table">
+            <thead>
               <tr>
-                <td><%= student.name %></td>
-                <td><%= student.email %></td>
-                <td><%= link_to 'Edit', edit_student_path(student) %></td>
-                <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+                <th>Name</th>
+                <th>Email</th>
 
-        <%= link_to 'New Student', new_student_path %>
-        <%= link_to 'Teacher Dashboard', teacher_dashboard_path %>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @students.each do |student| %>
+                <tr>
+                  <td class="student-list" width="20%"><%= student.name %></td>
+                  <td class="student-list" width="28%"><%= student.email %></td>
+                  <td class="student-list"><%= link_to edit_student_path(student) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+        <%= link_to 'NEW STUDENT', new_student_path, class: "pure-button topic-button-primary" %>
 
     </div>
 </div>

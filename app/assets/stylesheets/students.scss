@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// .student-splash {
+//     /* absolute center .splash within .splash-container */
+//     width: 90%;
+//     height: 70%;
+//     margin: auto;
+//     position: absolute;
+//     top: -100px; left: 0; bottom: 0; right: 0;
+//     text-align: center;
+// }
+
 .student-splash {
     /* absolute center .splash within .splash-container */
-    width: 90%;
+    width: 100%;
     height: 70%;
     margin: auto;
+    margin-left: 0px;
     position: absolute;
     top: -100px; left: 0; bottom: 0; right: 0;
     text-align: center;
@@ -143,33 +154,33 @@ nav ul:after {
 }
 
 #score_1 {
-  color: #e20303;
-  background: #fb6a6a;
+  color: hsl(0, 50, 50);
+  background: hsl(0, 50, 80);
 }
 
 #score_2 {
-  color: #fe4d4d;
-  background: #fc9c9c;
+  color: hsl(24, 50, 50);
+  background: hsl(24, 50, 80);
 }
 
 #score_3 {
-  color: #fe9a9a;
-  background: #fecdcd;
+  color: hsl(48, 50, 50);
+  background: hsl(48, 50, 80);
 }
 
 #score_4 {
-  color: #80fdab;
-  background: #cbfede;
+  color: hsl(72, 50, 50);
+  background: hsl(72, 50, 80);
 }
 
 #score_5 {
-  color: #34fd78;
-  background: #9cfcbd;
+  color: hsl(96, 50, 50);
+  background: hsl(96, 50, 80);
 }
 
 #score_6 {
-  color: #009933;
-  background: #80fdab;
+  color: hsl(120, 50, 50);
+  background: hsl(120, 50, 80);
 }
 
 .tip {
@@ -178,4 +189,56 @@ nav ul:after {
   margin-top: -3em;
   margin-bottom: 1em;
   color: black;
+}
+
+.student-name {
+  // width: 20%;
+  font-size: 20px;
+  font-family: "Lato"
+}
+
+.student-email {
+  // width: 28%;
+  font-size: 20px;
+  font-family: "Lato"
+}
+
+.student-list {
+  font-size: 20px;
+  font-family: "Lato"
+}
+
+.student-table {
+  width: 90%;
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 38px;
+  float: left;
+}
+
+.student-header {
+  font-family: "Lato";
+  font-size: 20px;
+  padding-left: 16px;
+  padding-bottom: 25px;
+}
+
+.student-button-primary {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-bottom: 31px;
+    margin-left: 50px;
+    float: left;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
+
+.student-row {
+  margin-top: 50px;
+  display: block;
 }

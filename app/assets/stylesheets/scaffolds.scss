@@ -30,13 +30,13 @@ a {
   color: #000;
   text-decoration: none;
 
-  &:visited {
-    color: #fff;
-  }
-
+  // &:visited {
+  //   color: #fff;
+  // }
+  //
   &:hover {
-    color: #6699CC;
-    background-color: #538cc5;
+    color: #808080;
+    // background-color: #808080;
   }
 }
 
