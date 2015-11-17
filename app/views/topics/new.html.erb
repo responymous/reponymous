@@ -6,6 +6,7 @@
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@current_user.name}", edit_teacher_path(@current_user), class: "profile-right" %>
 
         </ul>
     </div>
@@ -14,7 +15,7 @@
 <div class="splash-container">
     <div class="topic-splash">
 
-        <h1 class="topic-splash-head">NEW TOPIC</h1>
+        <h1 class="new-topic-head">NEW TOPIC</h1>
 
           <div class="topic-row">
             <%= form_for(@topic) do |f| %>

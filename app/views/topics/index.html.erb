@@ -6,14 +6,15 @@
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@current_user.name}", edit_teacher_path(@current_user), class: "profile-right" %>
         </ul>
     </div>
 </div>
 
 <h1 class="topics-splash-head">TOPICS</h1>
 
-<div class="topics-table">
-  <table>
+<div class="topics-table-container">
+  <table class="topics-table">
     <thead>
       <tr>
         <th colspan="3"></th>
