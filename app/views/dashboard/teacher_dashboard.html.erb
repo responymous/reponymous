@@ -24,7 +24,7 @@
 
 
                 <div class="topic-progress">
-                  <%= link_to 'SEE PROGRESS', topic_path(@current_user), class: "pure-button teacher-button-primary"  %>
+                  <%= link_to 'SEE PROGRESS', @current_user.current_topic, class: "pure-button teacher-button-primary"  %>
                   <%= form_for(@teacher) do |f| %>
                     <%= f.hidden_field :current_topic_id, value: nil %>
                     <div class="actions">
