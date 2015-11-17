@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  before_action :logged_in?, except: [:new, :create]
+  before_action :teachers_only, except: [:new, :create]
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      redirect_to teacher_dashboard_path(:id), notice: 'teacher was successfully created.'
+      redirect_to teacher_dashboard_path, notice: 'Teacher was successfully created.'
     else
       render :new
     end
@@ -34,7 +34,6 @@ class TeachersController < ApplicationController
       render :edit
     end
   end
-
 
   def show
     # @average = Score.score.average[1]
@@ -62,7 +61,7 @@ class TeachersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def teacher_params
-      params.require(:teacher).permit(:name, :email, :password)
+      params.require(:teacher).permit(:name, :email, :password, :current_topic_id)
     end
 
     def allow_access?

@@ -1,17 +1,24 @@
 Rails.application.routes.draw do
 
-  get 'teacher_dashboard/:id', to: 'dashboard#teacher_dashboard', as: 'teacher_dashboard'
-  # post 'teacher_dashboard' => 'dashboard#teacher_dashboard'
+  post 'scores/create'
+
+  get 'teacher_dashboard' => 'dashboard#teacher_dashboard'
   get 'student_dashboard' => 'dashboard#student_dashboard'
+
+  get 'refresh' => 'dashboard#refresh'
+  get 'teacher_refresh' => 'dashboard#teacher_refresh'
+
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
+
   root 'sessions#new'
   resources :topics
   resources :students
   resources :teachers
+  resources :scores, only: :create
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

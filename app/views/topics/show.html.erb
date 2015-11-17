@@ -1,14 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+        <ul class="pure-menu-list">
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+        </ul>
+    </div>
+</div>
 
-<p>
-  <strong>Teacher:</strong>
-  <%= @topic.teacher_id %>
-</p>
+<div class="splash-container">
+    <div class="teacher-splash">
 
-<%= link_to 'Edit', edit_topic_path(@topic) %>
-<%= link_to 'Back', teacher_dashboard_path(:id) %>
+    <h1 class="teacher-splash-head"><%= @topic.title %> Scores Over Time</h1>
+
+    <svg id='topics-graph'></svg>
+
+    <script>
+      var data = <%= @topic.all_scores.to_json.html_safe %>
+
+      // Sample Output
+      // [{date: "1-May-12", close: 20},
+      //   {date: "4-May-12", close: 30},
+      //   {date: "7-May-12", close: 10}]
+    </script>
+
+  </div>
+</div>

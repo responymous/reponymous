@@ -1,57 +1,49 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
-
-    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
-
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<link rel="stylesheet" href="css/layouts/marketing.css">
-
-</head>
-<body>
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'Responymous', login_path, class: "pure-menu-heading" %>
+
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li>
-            <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li> -->
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Logout', logout_path, method: :delete, class: "pure-menu-link" %></li>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@teacher.name}", edit_teacher_path(@current_user), class: "profile-right" %>
         </ul>
     </div>
 </div>
 
 <div class="splash-container">
     <div class="teacher-splash">
-      <p id="notice"><%= notice %></p>
+
         <h1 class="teacher-splash-head">TEACHER DASHBOARD</h1>
-
-        <p class="splash-subhead">
-
-          <h1>Welcome: <%= @teacher.name %></h1>
-
-          <%= link_to 'My Profile', edit_teacher_path(@current_user), class: "pure-button pure-button-primary" %>
-          <%= link_to 'Edit Students', students_path, class: "pure-button pure-button-primary" %>
-          <%= link_to 'Create Topics', new_topic_path(@current_user), class: "pure-button pure-button-primary" %>
-          <%= link_to 'Edit Topics', edit_topic_path(@current_user), class: "pure-button pure-button-primary" %>
-          <%= link_to 'Delete Topics', topic_path(@current_user), class: "pure-button pure-button-primary" %>
-          <p class="avg-heading">Average</p>
-          <p class="teacher-score"><%= @topic_scores.average(:score).round(1).to_f %></p>
-          <p class="numscore-heading">Number of Scores</p>
-          <p class="teacher-score"><%= @topic_scores.count %></p>
+          <div>
+              <% if @topic %>
+                <div id= "teacher_refresh">
+                  <%= render 'teacher_refresh'%>
+                </div>
 
 
-        </p>
+                <div class="topic-progress">
+                  <%= link_to 'SEE PROGRESS', topic_path(@current_user), class: "pure-button teacher-button-primary"  %>
+                  <%= form_for(@teacher) do |f| %>
+                    <%= f.hidden_field :current_topic_id, value: nil %>
+                    <div class="actions">
+                        <%= f.submit "STOP TOPIC", class: "pure-button teacher-button-primary" %>
+                    </div>
+                  <% end %>
+                </div>
+              <% else %>
+                <div class="empty-topic">No topic is currently active. &nbsp;Please select a topic to begin.</div>
+                <div>
+                    <%= form_for(@teacher) do |f| %>
+                      <%= f.collection_select(:current_topic_id, @current_user.topics, :id, :title, prompt: true) %>
+                      <div class="actions">
+                        <%= f.submit "CHANGE TOPIC", class: "pure-button teacher-button-primary" %>
+                      </div>
+                    <% end %>
+                </div>
+              <% end %>
+          </div>
 
     </div>
 </div>
-
-
-</body>
-</html>

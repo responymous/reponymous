@@ -1,0 +1,21 @@
+<div class="student-topic">Instructor:  <%= @current_user.teacher.name %></div>
+
+<div class="student-topic">Current Topic:  <%= @current_user.current_topic_title %></div>
+
+<div>
+  <table class="score-blocks">
+    <tbody>
+      <tr>
+        <% ["WHAT IS HAPPENING", "I'm lost", "wait wait wait", "uh... okay", "no prob bob", "easy peasy"].each_with_index do |word, counter| %>
+          <% array_of_words =  %>
+          <td><%= button_to counter+1, scores_path(score: {score: counter+1,
+              topic_id: @current_user.teacher.current_topic_id,
+              student_id: @current_user.id}),
+              class: "score", id: "score_#{counter+1}", method: :post, remote: true %>
+              <div class="tip"><%= word %></div>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>

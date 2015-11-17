@@ -1,9 +1,10 @@
 class TopicsController < ApplicationController
+  before_action :teachers_only
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   def index
-    @topics = Topic.all
+    @topics =  Topic.where(teacher_id: @current_user)
   end
 
   # GET /topics/1

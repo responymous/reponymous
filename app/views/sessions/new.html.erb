@@ -1,47 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
-
-    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
-
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<link rel="stylesheet" href="css/layouts/marketing.css">
-
-</head>
-<body>
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'Responymous', login_path, class: "pure-menu-heading" %>
+      <!-- <%= link_to '', login_path, class: "pure-menu-heading" %> -->
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li>
-            <li class="pure-menu-item pure-menu-selected"><%= link_to 'Sign Up', new_teacher_path, class: "pure-menu-link" %></li>
+            <!-- <li class="pure-menu-item pure-menu-selected"><%= link_to 'Home', login_path, class: "pure-menu-link" %></li> -->
+            <%= link_to ' Teacher Sign Up', new_teacher_path, class: "login-nav-right" %>
         </ul>
     </div>
 </div>
 
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">BLANK STARES</h1>
+<div class="login-splash-container">
+    <div class="login-splash">
+        <h1 class="login-splash-head">BLANK STARES</h1>
         <p class="splash-subhead">
-            Asking for help just got easier!
+            Asking for help just got easier.
         </p>
         <p class="splash-subhead">
 
           <%= form_tag(login_path) do  %>
-            <p><%= email_field_tag :email %></p>
             <p><%= label_tag :email %></p>
+            <p><%= email_field_tag :email %></p>
 
-            <p><%= password_field_tag :password %></p>
             <p><%= label_tag :password %></p>
+            <p><%= password_field_tag :password %></p>
 
             <p>
-              <%= submit_tag "Get Started", class: "pure-button pure-button-primary" %>
+              <%= submit_tag "GET STARTED", class: "pure-button login-button-primary" %>
             </p>
 
           <% end %>
@@ -138,8 +122,3 @@
     </div>
 
 </div> -->
-
-</body>
-</html>
-
-<!-- <p>New teacher? <%= link_to "Sign up now!", new_teacher_path %></p> -->

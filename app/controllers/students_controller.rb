@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :logged_in?
+  before_action :teachers_only, except: [:show]
+  before_action :students_only, only: [:show]
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   # GET /students
@@ -9,6 +10,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   def show
+    @student = Student.find(params[:id])
     # @average = Score.where(student_id: @current_user)
     # @thingy = Score.average
   end

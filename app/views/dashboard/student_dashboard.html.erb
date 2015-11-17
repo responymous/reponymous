@@ -1,24 +1,22 @@
-<h1>Student Dashboard</h1>
-<h3>Raise your hand anonymously!</h3>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'STUDENT TOPICS', student_path(@current_user), class: "nav-bar-left" %>
 
-<tbody>
-  <tr>
-    <% (1..6).each do |counter| %>
-      <td><%= button_to counter, student_path(@current_user, student: {score: counter}), class: "score", method: :patch, remote: true %></td>
+        <ul class="pure-menu-list">
+            <h1 class="teacher-nav-head"> Welcome back <%= @current_user.name %></h1>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+        </ul>
+    </div>
+</div>
 
-    <% end %>
-  </tr>
-</tbody>
+<div class="splash-container">
+  <div class="student-splash">
 
+    <h1 class="student-splash-head">STUDENT DASHBOARD</h1>
 
-<p><%= link_to 'LOGOUT', logout_path, method: :delete %></p>
+    <div id='student_button'>
+      <%= render 'score_table' %>
+    </div>
 
-
-
-<!-- * Add six buttons to the student_dashboard.
-* All the buttons submit to the same action, with one param but with different values. params[:student][:score] == 4
-* The one action can be students#update
-* The trick is the redirect.
-* On student dashboard, show one of the buttons as the selected one, based on the current user's score.
-
-* AFTER THAT: Teacher can reset all scores. -->
+  </div>
+</div>

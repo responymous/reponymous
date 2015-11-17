@@ -2,6 +2,180 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.student-splash {
+    /* absolute center .splash within .splash-container */
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    top: -100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+}
+
+.student-splash-head {
+    font-family: "Lato-regular";
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.student-topic {
+  font-family: "Lato-regular";
+  font-size: 30px;
+  color: #808080;
+  padding: 1em 1.6em;
+  padding-top: 0px;
+  font-weight: 100;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input.score {
+  font-family: "Lato-regular";
+  font-size: 100px;
+  background: white;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-radius: 7px;
+  border: 1px solid lightgrey;
+}
+
+
 .new-student-label {
   color: #1f8dd6;
+}
+
+.field {
+  text-align: left;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  margin-bottom: -4px;
+}
+
+.email {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  margin-bottom: -4px;
+}
+
+.password {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  margin-bottom: -4px;
+}
+
+.student {
+  color: #000000;
+  text-align: left;
+  text-color: #808080;
+  height: 66px;
+  input {
+    background-color: grey;
+    background: #efefef;
+    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    border-radius: 7px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+
+
+  }
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul {
+	background: #efefef;
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+.score-blocks {
+  width: 816px;
+
+  form {
+    margin-bottom: 20px;
+  }
+}
+
+#score_1 {
+  color: #e20303;
+  background: #fb6a6a;
+}
+
+#score_2 {
+  color: #fe4d4d;
+  background: #fc9c9c;
+}
+
+#score_3 {
+  color: #fe9a9a;
+  background: #fecdcd;
+}
+
+#score_4 {
+  color: #80fdab;
+  background: #cbfede;
+}
+
+#score_5 {
+  color: #34fd78;
+  background: #9cfcbd;
+}
+
+#score_6 {
+  color: #009933;
+  background: #80fdab;
+}
+
+.tip {
+  font-family: "Lato-light";
+  font-size: 20px;
+  margin-top: -3em;
+  margin-bottom: 1em;
+  color: black;
 }

@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107184828) do
+ActiveRecord::Schema.define(version: 20151112220910) do
 
   create_table "scores", force: :cascade do |t|
     t.integer  "score"
     t.integer  "topic_id"
     t.integer  "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.float    "average_thus_far"
   end
 
   create_table "students", force: :cascade do |t|
@@ -34,9 +35,9 @@ ActiveRecord::Schema.define(version: 20151107184828) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "current_topic"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "current_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|

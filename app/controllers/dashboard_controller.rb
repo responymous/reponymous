@@ -1,14 +1,27 @@
 class DashboardController < ApplicationController
-  before_action :logged_in?
+  before_action :teachers_only, except: [:student_dashboard, :refresh]
+  before_action :students_only, only: [:student_dashboard, :refresh]
 
   def teacher_dashboard
-    @teacher = Teacher.find_by_id(session[:user_id])
-    @topic_scores = Score.where(topic_id: 2)
+    @teacher = @current_user
+    @topic = @current_user.current_topic
+
     # @average = Score.where(student_id: @current_user).score_avg
   end
 
   def student_dashboard
   end
+
+  def refresh
+
+  end
+
+  def teacher_refresh
+    @current_user = Teacher.find_by_id(session[:user_id])
+    @topic = @current_user.current_topic
+  end
+
+
 
 
 

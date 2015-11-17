@@ -1,30 +1,66 @@
-<%= form_for(@teacher) do |f| %>
-  <% if @teacher.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
 
-      <ul>
-      <% @teacher.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'Blank Stares', login_path, class: "pure-menu-heading" %>
+      <ul class="pure-menu-list">
+        <nav>
+          <ul>
+
+          <li class="pure-menu-item pure-menu-selected"><%= link_to 'Back to Login', logout_path, method: :delete, class: "pure-menu-link" %></li>
+        </ul>
+        </nav>
+
+        </ul>
     </div>
-  <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
+<div class="splash-container">
+    <div class="teacher-splash">
+      <p id="notice"><%= notice %></p>
+        <h1 class="teacher-splash-head">New Teacher</h1>
+        <%= form_for(@teacher) do |f| %>
+          <% if @teacher.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+              <ul>
+              <% @teacher.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <h1 class="name">Name</h1>
+
+          <div class="field">
+            <%= f.label :name, class: "new-student-label" %><br>
+            <%= f.text_field :name %>
+          </div>
+          <h1 class="email">Email</h1>
+
+          <div class="field">
+            <%= f.label :email, class: "new-student-label" %><br>
+            <%= f.text_field :email %>
+          </div>
+          <h1 class="password">Password</h1>
+
+          <div class="field">
+            <%= f.label :password, class: "new-student-label" %><br>
+            <%= f.password_field :password %>
+          </div>
+        <div class="student">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+
+        <p class="splash-subhead">
+
+
+
+        </p>
+
+    </div>
+</div>
+
+<%= link_to 'Back', teacher_dashboard_path %>

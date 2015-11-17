@@ -1,25 +1,9 @@
-<p id="notice"><%= notice %></p>
+<svg id='student-graph'></svg>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @student.password %>
-</p>
-
-<p>
-  <strong>Teacher:</strong>
-  <%= @student.teacher_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', teacher_dashboard_path(:id) %>
+<script>
+var data = <%= @current_user.student_topics.to_json.html_safe %>
+  // Sample Output
+  // [{topic: "TDD", average: 2.5},
+  //   {topic: "Mailers", average: 3.76},
+  //   {topic: "Enumerable", average: 4.9}]
+</script>
