@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private def log_in(user)
-    # session[:user_id] = user.id
-    # session[:user_type] = user.class.to_s
+    session[:user_id] = user.id
+    session[:user_type] = user.class.to_s
   end
 
   private def teachers_only
