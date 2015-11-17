@@ -1,6 +1,38 @@
-<h1>Editing Student</h1>
 
-<%= render 'form' %>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', teacher_dashboard_path(:id) %>
+        <ul class="pure-menu-list">
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@student.teacher.name}", edit_teacher_path(@current_user), class: "profile-right" %>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="student-splash">
+
+        <h1 class="teacher-splash-head">UPDATE STUDENT PROFILE</h1>
+
+          <div class="teacher-row">
+            <%= form_for(@student) do |f| %>
+              <%= f.label :name, class: 'teacher-edit-labels' %>
+              <%= f.text_field :name, class: 'form-control' %>
+
+              <%= f.label :email, class: 'teacher-edit-labels' %>
+              <%= f.email_field :email, class: 'form-control' %>
+
+              <%= f.label :password, class: 'teacher-edit-labels' %>
+              <%= f.password_field :password, class: 'form-control' %>
+              <%= link_to 'Delete', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: "topics-page" %>
+          </div>
+          <div>
+              <%= f.submit "SAVE CHANGES", class: "pure-button edit-teacher-button" %>
+
+            <% end %>
+          </div>
+    </div>
+</div>

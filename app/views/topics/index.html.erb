@@ -24,8 +24,8 @@
       <% @topics.each do |topic| %>
         <tr>
           <td class="topics-page"><%= topic.title %></td>
-          <td class="topics-page"><%= link_to 'Edit', edit_topic_path(topic) %></td>
-          
+          <td class="topics-page"><%= link_to edit_topic_path(topic) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+
         </tr>
       <% end %>
     </tbody>

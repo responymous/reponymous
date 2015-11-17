@@ -208,14 +208,6 @@ nav ul:after {
   font-family: "Lato"
 }
 
-.pure-g {
-  width: 90%;
-  text-align: left;
-  margin-top: 25px;
-  margin-left: 38px;
-  float: left;
-}
-
 .student-table {
   width: 90%;
   text-align: left;
@@ -244,4 +236,9 @@ nav ul:after {
       color: #fff;
       background-color: #538cc5;
     }
+}
+
+.student-row {
+  margin-top: 50px;
+  display: block;
 }

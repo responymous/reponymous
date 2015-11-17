@@ -31,8 +31,7 @@
                 <tr>
                   <td class="student-list" width="20%"><%= student.name %></td>
                   <td class="student-list" width="28%"><%= student.email %></td>
-                  <td class="student-list"><%= link_to 'Edit', edit_student_path(student) %></td>
-                  <td class="student-list"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td class="student-list"><%= link_to edit_student_path(student) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
                 </tr>
               <% end %>
             </tbody>
