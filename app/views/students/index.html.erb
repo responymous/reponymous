@@ -7,6 +7,7 @@
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@current_user.name}", edit_teacher_path(@current_user), class: "profile-right" %>
         </ul>
     </div>
 </div>
@@ -38,7 +39,7 @@
           </table>
         </div>
 
-        <%= link_to 'NEW STUDENT', new_student_path, class: "pure-button topic-button-primary" %>
+        <%= link_to 'NEW STUDENT', new_student_path, class: "pure-button new-student-button" %>
 
     </div>
 </div>

@@ -66,6 +66,20 @@ input.score {
   border: 1px solid lightgrey;
 }
 
+.new-student-button {
+  background: #6699CC;
+  color: white;
+  border-radius: 5px;
+  font-size: 118%;
+  margin-bottom: 31px;
+  margin-left: 50px;
+  float: left;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
 
 .new-student-label {
   color: #1f8dd6;
@@ -116,8 +130,6 @@ input.score {
     list-style: none;
     position: relative;
     display: inline-table;
-
-
   }
 }
 
