@@ -1,11 +1,12 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
       <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
       <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+            <%= link_to "INSTRUCTOR: #{@current_user.name}", edit_teacher_path(@current_user), class: "profile-right" %>
         </ul>
     </div>
 </div>
