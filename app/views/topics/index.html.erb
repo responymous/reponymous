@@ -1,11 +1,10 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <%= link_to 'MY PROFILE', edit_teacher_path(@current_user), class: "nav-bar-left" %>
-      <%= link_to 'EDIT STUDENTS', students_path, class: "nav-bar-left" %>
-      <%= link_to 'EDIT TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
+      <%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
 
         <ul class="pure-menu-list">
-
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
         </ul>
     </div>
@@ -13,27 +12,28 @@
 
 <h1 class="topics-splash-head">TOPICS</h1>
 
-<table class="topics-table">
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @topics.each do |topic| %>
+<div class="topics-table">
+  <table>
+    <thead>
       <tr>
-        <td class="topics-page"><%= topic.title %></td>
-        <td class="topics-page"><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td class="topics-page"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<%= link_to 'NEW TOPIC', new_topic_path, class: "pure-button topic-button-primary" %>
-<%= link_to 'TEACHER DASHBOARD', teacher_dashboard_path, class: "pure-button teacher-button-primary" %>
+    <tbody>
+      <% @topics.each do |topic| %>
+        <tr>
+          <td class="topics-page"><%= topic.title %></td>
+          <td class="topics-page"><%= link_to 'Edit', edit_topic_path(topic) %></td>
+          <td class="topics-page"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'NEW TOPIC', new_topic_path, class: "pure-button topic-button-primary" %>
+
+</div>
 <div>
   <svg id='teacher-bar-graph'></svg>
 </div>

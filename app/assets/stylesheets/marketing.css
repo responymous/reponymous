@@ -118,6 +118,14 @@ input.pure-button-primary {
     margin-top: 20px;
 }
 
+.login-button-primary {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    width: 170px;
+    margin-top: 20px;
+}
+
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
@@ -129,7 +137,7 @@ input.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #DCDCDC;
+    background: #2f5984;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -168,8 +176,8 @@ input.pure-button-primary {
     font-family: "Lato";
     font-size: 16px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #DCDCDC;
+    color: #fff;
+    background-color: #2f5984;
     text-align: center;
     margin-top: 2px;
     margin-right: 2px;
@@ -182,9 +190,9 @@ input.pure-button-primary {
     float: right;
 }
 
-.login-nav-right:hover, .login-nav-right:active {
+/*.login-nav-right:hover, .login-nav-right:active {
     background-color: #6699CC;
-}
+}*/
 
 
 /*

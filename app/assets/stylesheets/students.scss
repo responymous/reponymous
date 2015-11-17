@@ -29,7 +29,7 @@
 .student-topic {
   font-family: "Lato-regular";
   font-size: 30px;
-  color: black;
+  color: #808080;
   padding: 1em 1.6em;
   padding-top: 0px;
   font-weight: 100;
@@ -47,11 +47,14 @@ input.score {
   font-family: "Lato-regular";
   font-size: 100px;
   background: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-radius: 7px;
+  border: 1px solid lightgrey;
 }
+
 
 .new-student-label {
   color: #1f8dd6;
@@ -90,32 +93,32 @@ input.score {
   text-align: left;
   text-color: #808080;
   height: 66px;
-    input {
-      background-color: grey;
-      background: #efefef;
-      background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-      background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-      background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
-      box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-      padding: 0 20px;
-      border-radius: 7px;
-      list-style: none;
-      position: relative;
-      display: inline-table;
+  input {
+    background-color: grey;
+    background: #efefef;
+    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    border-radius: 7px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
 
 
-      }
+  }
 }
 
 nav ul ul {
 	display: none;
 }
 
-	nav ul li:hover > ul {
-		display: block;
-	}
+nav ul li:hover > ul {
+	display: block;
+}
 
-  nav ul {
+nav ul {
 	background: #efefef;
 	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
@@ -127,6 +130,52 @@ nav ul ul {
 	position: relative;
 	display: inline-table;
 }
-	nav ul:after {
-		content: ""; clear: both; display: block;
-	}
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+.score-blocks {
+  width: 816px;
+
+  form {
+    margin-bottom: 20px;
+  }
+}
+
+#score_1 {
+  color: #e20303;
+  background: #fb6a6a;
+}
+
+#score_2 {
+  color: #fe4d4d;
+  background: #fc9c9c;
+}
+
+#score_3 {
+  color: #fe9a9a;
+  background: #fecdcd;
+}
+
+#score_4 {
+  color: #80fdab;
+  background: #cbfede;
+}
+
+#score_5 {
+  color: #34fd78;
+  background: #9cfcbd;
+}
+
+#score_6 {
+  color: #009933;
+  background: #80fdab;
+}
+
+.tip {
+  font-family: "Lato-light";
+  font-size: 20px;
+  margin-top: -3em;
+  margin-bottom: 1em;
+  color: black;
+}
