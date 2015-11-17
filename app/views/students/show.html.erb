@@ -1,9 +1,28 @@
-<svg id='student-graph'></svg>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'DASHBOARD', student_dashboard_path, class: "topic-nav-left" %>
 
-<script>
-var data = <%= @current_user.student_topics.to_json.html_safe %>
-  // Sample Output
-  // [{topic: "TDD", average: 2.5},
-  //   {topic: "Mailers", average: 3.76},
-  //   {topic: "Enumerable", average: 4.9}]
-</script>
+        <ul class="pure-menu-list">
+            <h1 class="teacher-nav-head"> SIGNED IN AS <%= @current_user.name %></h1>
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+  <div class="student-splash">
+
+    <h1 class="student-splash-head">MY AVERAGE SCORES</h1>
+
+    <svg id='student-graph'></svg>
+
+    <script>
+    var data = <%= @current_user.student_topics.to_json.html_safe %>
+      // Sample Output
+      // [{topic: "TDD", average: 2.5},
+      //   {topic: "Mailers", average: 3.76},
+      //   {topic: "Enumerable", average: 4.9}]
+    </script>
+
+  </div>
+</div>

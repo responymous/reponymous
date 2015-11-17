@@ -1,3 +1,15 @@
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <%= link_to 'DASHBOARD', teacher_dashboard_path, class: "topic-nav-left" %>
+      <%= link_to 'STUDENTS', students_path, class: "nav-bar-left" %>
+      <%= link_to 'TOPICS', topics_path(@current_user), class: "nav-bar-left" %>
+
+        <ul class="pure-menu-list">
+            <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
+        </ul>
+    </div>
+</div>
+
 <%= form_for(@topic) do |f| %>
   <% if @topic.errors.any? %>
     <div id="error_explanation">
@@ -11,12 +23,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <h1 class="topic-splash-head">UPDATE TOPIC</h1>
+
+  <div class="teacher-row">
+    <%= f.label :title, class: 'teacher-edit-labels' %><br>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: "topics-page" %>
   </div>
   <%= f.hidden_field :teacher_id, value: @current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "SAVE CHANGES", class: "pure-button edit-teacher-button" %>
   </div>
 <% end %>

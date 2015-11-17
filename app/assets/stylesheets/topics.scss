@@ -1,7 +1,7 @@
-
+// NAV BAR //
 .topic-nav-left:link, .topic-nav-left:visited {
     display: block;
-    width: 200px;
+    width: 120px;
     font-family: "Lato";
     font-size: 16px;
     font-weight: bold;
@@ -20,6 +20,51 @@
     float: left;
 }
 
+// BODY //
+.topic-splash-head {
+    font-size: 50px;
+    font-family: "Lato-regular";
+    font-weight: bold;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.topic-splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    top: -100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    margin-left: 34px;
+}
+
+.topic-row {
+  margin-top: 30px;
+  display: block;
+  text-align: left;
+}
+
+.topic-edit-labels {
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.topic-submit {
+  display: block;
+  text-align: left;
+}
+
 .topic-button-primary {
     background: #6699CC;
     color: white;
@@ -27,6 +72,7 @@
     font-size: 118%;
     margin-bottom: 31px;
     margin-left: 12px;
+    float: left;
 
     &:hover {
       color: #fff;
@@ -34,6 +80,21 @@
     }
 }
 
+.edit-topic-button {
+    background: #6699CC;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-top: 50px;
+    margin-bottom: 31px;
+
+    &:hover {
+      color: #fff;
+      background-color: #538cc5;
+    }
+}
+
+// D3 GRAPH //
 .svg{
   width: 1000px;
   height: 500px;
