@@ -50,7 +50,14 @@ counter = Time.now - 9.days
 
 Topic.all.each do |t|
  100.times do |i|
-   Score.create!(score: rand(6)+1,
+   if t.id % 3 == 0
+     score = rand(6)+1
+   elsif t.id % 3 == 1
+     score = 1.5 + (i.to_f/100)*4 + (rand-0.5)
+   else
+     score = 1.5 + ((50-i).abs.to_f/50)*4 + (rand-0.5)
+   end
+   Score.create!(score: score,
        student: t.teacher.students.sample,
        topic_id: t.id,
        created_at: counter += rand(216)+1)
