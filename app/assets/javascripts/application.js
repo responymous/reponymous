@@ -42,7 +42,7 @@ function teacher_ajaxcall() {
 
 $(function t() {
   if ($("#teacher_refresh").length > 0) {
-    window.setInterval('teacher_ajaxcall()', 15000);
+    window.setInterval('teacher_ajaxcall()', 5000);
   }
 });
 
@@ -54,7 +54,7 @@ function student_ajaxcall() {
 
 $(function s() {
   if ($("#student_button").length > 0) {
-    window.setInterval('student_ajaxcall()', 5000);
+    window.setInterval('student_ajaxcall()', 15000);
   }
 });
 

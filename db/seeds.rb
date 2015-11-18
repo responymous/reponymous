@@ -28,16 +28,16 @@ Student.create!(name: "David", email: "david@example.com", password: "password",
 end
 
 
-Topic.create!(title: "Pre-Work", teacher_id: 1)
-Topic.create!(title: "Control Flow", teacher_id: 1)
+Topic.create!(title: "Ruby", teacher_id: 1)
+Topic.create!(title: "Git", teacher_id: 1)
+Topic.create!(title: "Object Design", teacher_id: 1)
 Topic.create!(title: "Testing", teacher_id: 1)
-Topic.create!(title: "Modules", teacher_id: 1)
+Topic.create!(title: "Databases", teacher_id: 1)
+Topic.create!(title: "APIs", teacher_id: 1)
 Topic.create!(title: "HTML and CSS", teacher_id: 1)
 Topic.create!(title: "Rails", teacher_id: 1)
-Topic.create!(title: "Scaffold", teacher_id: 1)
 Topic.create!(title: "JavaScript", teacher_id: 1)
-Topic.create!(title: "Efficiency", teacher_id: 1)
-Topic.create!(title: "Processing", teacher_id: 1)
+Topic.create!(title: "Security", teacher_id: 1)
 
 Topic.create!(title: "Heroku", teacher_id: 2)
 Topic.create!(title: "GitHub", teacher_id: 2)
