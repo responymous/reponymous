@@ -22,10 +22,10 @@
             <%= form_for(@topic) do |f| %>
               <%= f.label :title, class: 'topic-edit-labels' %>
               <%= f.text_field :title, class: 'form-control' %>
-              <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: "topics-page" %>
               <%= f.hidden_field :teacher_id, value: @current_user.id %>
           </div>
           <div class="topic-submit">
+              <%= link_to 'DELETE', @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: "pure-button topic-delete-button" %>
               <%= f.submit "SAVE CHANGES", class: "pure-button edit-topic-button" %>
 
             <% end %>
