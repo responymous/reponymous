@@ -159,6 +159,22 @@
     }
 }
 
+.topics-graph-title {
+    font-family: "Lato-regular";
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 100;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 300px;
+}
+
 // D3 GRAPH //
 .svg{
   width: 1000px;
