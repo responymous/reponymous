@@ -4,6 +4,7 @@ function drawBarGraph(){
         width = 900 - margin.left - margin.right,
         height = 380 - margin.top - margin.bottom;
 
+
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
 

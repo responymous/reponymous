@@ -27,10 +27,11 @@
 
               <%= f.label :password, class: 'teacher-edit-labels' %>
               <%= f.password_field :password, class: 'form-control' %>
-              <%= link_to 'Delete', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: "topics-page" %>
+
           </div>
           <div>
-              <%= f.submit "SAVE CHANGES", class: "pure-button edit-teacher-button" %>
+              <%= link_to 'DELETE', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: "pure-button student-delete-button" %>
+              <%= f.submit "SAVE CHANGES", class: "pure-button student-save-changes-button" %>
 
             <% end %>
           </div>
