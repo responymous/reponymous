@@ -16,24 +16,6 @@
 //= require_tree .
 //
 
-// window.setInterval('ajaxcall()', 15000);
-//
-// function ajaxcall() {
-//   responce = $.ajax({
-//     url: "/refresh/",
-//     url: "/teacher_refresh/",
-//   });
-// }
-
-// var defaulttext = $('.defualt-text').text();
-//
-// $('.selectDefault').text(defaulttext);
-//
-// $('.selectBox').on('change',function(){
-//    var defaulttext2 = $('.selectBox').find(":selected").text();
-//     $('.selectDefault').text(defaulttext2);
-// });
-
 function teacher_ajaxcall() {
   response = $.ajax({
     url: "/teacher_refresh/",
@@ -158,3 +140,22 @@ $(drawTopicsGraph);
 //     $('.teacher-score').attr('id', 'teacher_score_6');
 //   }
 // })
+
+
+// window.setInterval('ajaxcall()', 15000);
+//
+// function ajaxcall() {
+//   responce = $.ajax({
+//     url: "/refresh/",
+//     url: "/teacher_refresh/",
+//   });
+// }
+
+// var defaulttext = $('.defualt-text').text();
+//
+// $('.selectDefault').text(defaulttext);
+//
+// $('.selectBox').on('change',function(){
+//    var defaulttext2 = $('.selectBox').find(":selected").text();
+//     $('.selectDefault').text(defaulttext2);
+// });
