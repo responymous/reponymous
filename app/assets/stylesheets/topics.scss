@@ -144,6 +144,21 @@
     }
 }
 
+.topic-delete-button {
+    background: #cf7171;
+    color: white;
+    border-radius: 5px;
+    font-size: 118%;
+    margin-top: 50px;
+    margin-bottom: 31px;
+    margin-right: 15px;
+
+    &:hover {
+      color: #fff;
+      background-color: #cb6767;
+    }
+}
+
 // D3 GRAPH //
 .svg{
   width: 1000px;
