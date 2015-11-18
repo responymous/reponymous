@@ -28,9 +28,17 @@ Student.create!(name: "David", email: "david@example.com", password: "password",
 end
 
 
-Topic.create!(title: "TDD", teacher_id: 1)
-Topic.create!(title: "AJAX", teacher_id: 1)
-Topic.create!(title: "Javascript", teacher_id: 1)
+Topic.create!(title: "Pre-Work", teacher_id: 1)
+Topic.create!(title: "Control Flow", teacher_id: 1)
+Topic.create!(title: "Testing", teacher_id: 1)
+Topic.create!(title: "Modules", teacher_id: 1)
+Topic.create!(title: "HTML and CSS", teacher_id: 1)
+Topic.create!(title: "Rails", teacher_id: 1)
+Topic.create!(title: "Scaffold", teacher_id: 1)
+Topic.create!(title: "JavaScript", teacher_id: 1)
+Topic.create!(title: "Efficiency", teacher_id: 1)
+Topic.create!(title: "Processing", teacher_id: 1)
+
 Topic.create!(title: "Heroku", teacher_id: 2)
 Topic.create!(title: "GitHub", teacher_id: 2)
 Topic.create!(title: "Metaphysics", teacher_id: 2)  #Topic ID: 2

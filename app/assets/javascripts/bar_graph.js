@@ -1,7 +1,7 @@
 function drawBarGraph(){
   if ($("#teacher-bar-graph").length > 0){
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
-        width = 400 - margin.left - margin.right,
+        width = 900 - margin.left - margin.right,
         height = 380 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
