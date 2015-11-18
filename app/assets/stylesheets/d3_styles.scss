@@ -6,17 +6,19 @@
 }
 //bar graph
 .area {
-  fill: steelblue;
+  fill: lightgrey;
+  stroke: grey;
 }
 
 
 .bar {
-  fill: steelblue;
+  fill: lightgrey;
   stroke: grey;
 }
 
 .bar:hover {
-  fill: red;
+  stroke: #538cc5;
+  fill: #6699cc;
 }
 
 .axis {
@@ -32,4 +34,9 @@
   fill: none;
   stroke: black;
   stroke-width: 1.5px;
+}
+
+text {
+  font-family: "Lato";
+  font-size: 14px;
 }
