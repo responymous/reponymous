@@ -53,9 +53,9 @@ Topic.all.each do |t|
    if t.id % 3 == 0
      score = rand(6)+1
    elsif t.id % 3 == 1
-     score = (rand(i)*5.0/100) + 1
+     score = 1.5 + (i.to_f/100)*4 + (rand-0.5)
    else
-     score = (rand((50-i).abs)*5.0/50) + 1
+     score = 1.5 + ((50-i).abs.to_f/50)*4 + (rand-0.5)
    end
    Score.create!(score: score,
        student: t.teacher.students.sample,
