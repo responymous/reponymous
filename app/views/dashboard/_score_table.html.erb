@@ -6,7 +6,7 @@
   <table class="score-blocks">
     <tbody>
       <tr>
-        <% ["Totally lost", "Really confused", "Not sure I get it", "Barely following", "Makes sense", "I got this"].each_with_index do |word, counter| %>
+        <% ["Put me on a milk carton", "Man overboard", "Brain is starting to melt", "Yes, no, maybe so", "I think I can...I think I can", "I got this"].each_with_index do |word, counter| %>
           <% array_of_words =  %>
           <td><%= button_to counter+1, scores_path(score: {score: counter+1,
               topic_id: @current_user.teacher.current_topic_id,
@@ -19,3 +19,5 @@
     </tbody>
   </table>
 </div>
+
+<!-- ["Totally lost", "Really confused", "Not sure I get it", "Barely following", "Makes sense", "I got this"] -->

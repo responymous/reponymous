@@ -7,7 +7,7 @@
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
-
+            <%= link_to "INSTRUCTOR: #{@current_user.name}", edit_teacher_path(@current_user), class: "profile-right" %>
         </ul>
     </div>
 </div>
@@ -15,9 +15,9 @@
 <div class="splash-container">
     <div class="topic-splash">
 
-        <h1 class="topic-splash-head">NEW STUDENT</h1>
+        <h1 class="teacher-splash-head">NEW STUDENT</h1>
 
-          <div class="topic-row">
+          <div class="teacher-row">
             <%= form_for(@student) do |f| %>
               <%= f.label :name, class: 'topic-edit-labels' %>
               <%= f.text_field :name, class: 'form-control' %>
@@ -31,13 +31,10 @@
               <%= f.hidden_field :teacher_id, value: @current_user.id %>
           </div>
 
-          <div class="topic-submit">
-              <%= f.submit "SAVE CHANGES", class: "pure-button edit-topic-button" %>
+          <div>
+              <%= f.submit "SAVE CHANGES", class: "pure-button edit-teacher-button" %>
 
               <% end %>
           </div>
     </div>
 </div>
-
-
-<%= link_to 'Back', teacher_dashboard_path %>
