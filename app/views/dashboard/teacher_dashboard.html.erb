@@ -7,7 +7,7 @@
 
         <ul class="pure-menu-list">
             <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-bar-right" %>
-            <%= link_to "INSTRUCTOR: #{@teacher.name}", edit_teacher_path(@current_user), class: "profile-right" %>
+            <%= link_to "INSTRUCTOR: #{@teacher.name}", edit_teacher_path(@current_user), class: "teacher-nav-head" %>
         </ul>
     </div>
 </div>

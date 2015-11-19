@@ -6,14 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Teacher.create!(name: "Danai", email: "d@teacher.com", password: "password")  #Teacher ID: 1
-Teacher.create!(name: "Mason", email: "m@teacher.com", password: "password")  #Teacher ID: 2
-Teacher.create!(name: "John", email: "j@teacher.com", password: "password")   #Teacher ID: 3
+Teacher.create!(name: "Mason", email: "mason@teacher.com", password: "password")  #Teacher ID: 1
+Teacher.create!(name: "Danai", email: "danai@teacher.com", password: "password")  #Teacher ID: 2
+Teacher.create!(name: "John", email: "john@teacher.com", password: "password")   #Teacher ID: 3
 
-Student.create!(name: "Ryan", email: "ryan@example.com", password: "password", teacher_id: 1)    #Student ID: 1
-Student.create!(name: "Doug", email: "doug@example.com", password: "password", teacher_id: 1)    #Student ID: 2
-Student.create!(name: "Blake", email: "blake@example.com", password: "password", teacher_id: 1)      #Student ID: 3
-Student.create!(name: "Tyler", email: "tyler@example.com", password: "password", teacher_id: 2)  #Student ID: 4
+Student.create!(name: "Ryan Graham", email: "ryan@example.com", password: "password", teacher_id: 1)
+Student.create!(name: "Doug Bryant", email: "doug@example.com", password: "password", teacher_id: 1)
+Student.create!(name: "Patrick Swayze", email: "swayze@example.com", password: "password", teacher_id: 1)
+Student.create!(name: "Tyler", email: "tyler@example.com", password: "password", teacher_id: 2)
 Student.create!(name: "Josh", email: "josh@example.com", password: "password", teacher_id: 2)
 Student.create!(name: "Julie", email: "julie@example.com", password: "password", teacher_id: 2)
 Student.create!(name: "Ruti", email: "ruti@example.com", password: "password", teacher_id: 3)
@@ -41,8 +41,8 @@ Topic.create!(title: "Security", teacher_id: 1)
 
 Topic.create!(title: "Heroku", teacher_id: 2)
 Topic.create!(title: "GitHub", teacher_id: 2)
-Topic.create!(title: "Metaphysics", teacher_id: 2)  #Topic ID: 2
-Topic.create!(title: "Mailers", teacher_id: 3)      #Topic ID: 3
+Topic.create!(title: "Metaphysics", teacher_id: 2)
+Topic.create!(title: "Mailers", teacher_id: 3)
 Topic.create!(title: "jQuery", teacher_id: 3)
 Topic.create!(title: "Instance Variables", teacher_id: 3)
 
