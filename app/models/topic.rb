@@ -8,7 +8,7 @@ class Topic < ActiveRecord::Base
   end
 
   def score_average
-    last_scores.sum(&:score).to_f/score_count
+    last_scores.blank? ? 0 : last_scores.sum(&:score).to_f/score_count
   end
 
   def last_scores
