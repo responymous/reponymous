@@ -52,6 +52,7 @@ Topic.all.each do |t|
  100.times do |i|
    if t.id % 3 == 0
      score = rand(6)+1
+     next if i > 5
    elsif t.id % 3 == 1
      score = 1.5 + (i.to_f/100)*4 + (rand-0.5)
    else
